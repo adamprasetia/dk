@@ -117,7 +117,7 @@
           <p class="lead">Dinas Kebersihan dan Pertamanan Kabupaten Cianjur dibentuk berdasarkan Peraturan Daerah dan Pembentukan Organisasi Perangkat Daerah Kabupaten Cianjur, yang kemudian ditindak lanjuti dengan Peraturan Bupati Kabupaten Cianjur Nomor 49 Tahun 2011, tentang Tugas, Fungsi dan Tata Kerja Unit Organisasi dilingkungan Dinas Kebersihan dan Pertamanan.</p>
         </div>
         <div class="col-md-5">
-          <img class="img-responsive" src="<?php echo config_item('assets') ?>img/kantor/1.jpg" alt="">
+          <img class="img-responsive" src="<?php echo config_item('assets') ?>img/office/1.jpg" alt="">
         </div>
       </div>
 
@@ -141,7 +141,7 @@
           <p class="lead">Berkembangnya wilayah pelayanan kebersihan pertamanan dan pemakaman yang di dukung oleh ketersediaan dan pembangunan infrastruktur yang handal.</p>
         </div>
         <div class="col-md-5">
-          <img class="img-responsive" src="<?php echo config_item('assets') ?>img/c3.jpg" alt="Generic placeholder image">
+          <img class="img-responsive" src="<?php echo config_item('assets') ?>img/kendaraan/2.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
