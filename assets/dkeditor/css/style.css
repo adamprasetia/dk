@@ -1,0 +1,17 @@
+@media (max-width: 768px){
+	.login-box, .register-box {
+	    width: 90%;
+	    margin-top: 20px;
+	}
+}
+.login-box, .register-box {
+    width: 360px;
+    margin: 7% auto;
+}
+
+.login-page, .register-page {
+    background: #d2d6de;
+}
+.control-label{
+	min-width:150px;
+}

@@ -8,7 +8,7 @@
 			</div>
 			<div class="col-md-6">
 				<h3 class="text-center">Visi</h3>
-				<p class="text-center">"Terwujudnya Cianjur yang Bersih, indah,dan nyaman menuju Cianjur yang lebih Sejahtera dan Berahlakul Karimah"</p>
+				<p class="text-center">"Cianjur Lebih Maju dan Agamis"</p>
 				<h3 class="text-center">Misi</h3>
 				<ul>
 					<li>Menjaga hubungan yang dialogis dan harmonis dengan masyarakat, Lembaga Pemerintah dan Non Pemerintah dalam meningkatkan Kota Cianjur yang Tertata Asri</li>
