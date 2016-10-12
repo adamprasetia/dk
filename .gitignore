@@ -9,6 +9,7 @@ application/logs/*
 !application/logs/.htaccess
 
 assets/photo/*
+assets/json/*
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
