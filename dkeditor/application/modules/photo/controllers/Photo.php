@@ -68,6 +68,10 @@ class Photo extends MY_Controller
 			$result_delete = $this->photo_model->delete($id);
 			if ($result_delete) {
 				$this->session->set_flashdata('success','Data berhasil di hapus');
+				$result_json = $this->generate_json();
+				if (!$result_json) {
+					$this->session->set_flashdata('error','Gagal generate json file');
+				}
 			}else{
 				$this->session->set_flashdata('error',$result_update);
 			}			
