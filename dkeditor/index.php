@@ -54,7 +54,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-
+	date_default_timezone_set('Asia/Jakarta');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -231,6 +231,9 @@ switch (ENVIRONMENT)
 
 	// Path to the front controller (this file) directory
 	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+
+	// Path to upload photo
+	define('BASEDIR', str_replace('\\dkeditor','', FCPATH));
 
 	// Name of the "system" directory
 	define('SYSDIR', basename(BASEPATH));

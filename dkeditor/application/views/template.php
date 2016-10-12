@@ -29,8 +29,9 @@
 		    </div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li <?php echo ($this->uri->segment(1)=='home'?'class="active"':'') ?>><?php echo anchor('home','Home') ?></li>
+					<li <?php echo ($this->uri->segment(1)=='home'?'class="active"':'') ?>><?php echo anchor('home','Beranda') ?></li>
 					<li <?php echo ($this->uri->segment(1)=='artikel'?'class="active"':'') ?>><?php echo anchor('artikel','Artikel') ?></li>
+					<li <?php echo ($this->uri->segment(1)=='photo'?'class="active"':'') ?>><?php echo anchor('photo','Foto') ?></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
@@ -53,7 +54,6 @@
 		?>
 		<hr>
 		<footer>
-			<p class="pull-right"><a href="#">Kembali ke atas</a></p>
 			<p>&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
 		</footer>
 	</div>

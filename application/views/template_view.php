@@ -15,7 +15,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-custom navbar-static-top">
-		<div class="container-fluid">
+		<div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -35,6 +35,7 @@
             <li <?php echo ($this->uri->segment(1)=='home'?'class="active"':'') ?>><?php echo anchor('home','Home') ?></li>
             <li <?php echo ($this->uri->segment(1)=='profil'?'class="active"':'') ?>><?php echo anchor('profil','Profil') ?></li>
             <li <?php echo ($this->uri->segment(1)=='visimisi'?'class="active"':'') ?>><?php echo anchor('visimisi','Visi & Misi') ?></li>
+            <li <?php echo ($this->uri->segment(1)=='gallery'?'class="active"':'') ?>><?php echo anchor('gallery','Galeri') ?></li>
             <li <?php echo ($this->uri->segment(1)=='banksampah'?'class="active"':'') ?>><?php echo anchor('banksampah','Bank Sampah') ?></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->

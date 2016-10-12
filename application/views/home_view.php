@@ -34,6 +34,7 @@
                 <li class="active"><?php echo anchor('home','Home') ?></li>
                 <li><?php echo anchor('profil','Profil') ?></li>
                 <li><?php echo anchor('visimisi','Visi & Misi') ?></li>
+                <li><?php echo anchor('gallery','Galeri') ?></li>
                 <li><?php echo anchor('banksampah','Bank Sampah') ?></li>
               </ul>
             </div>
