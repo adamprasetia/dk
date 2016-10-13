@@ -10,13 +10,13 @@ class Users extends MY_Controller
 		$this->data['title'] = $this->lang->line('menu_user');
 		$this->data['subtitle'] = $this->lang->line('list');
 		$this->data['index'] = 'users';
-		$this->load->model($this->data['index'].'/model');
+		$this->load->model($this->data['index'].'/users_model');
 	}
 	public function index()
 	{
 		$offset = $this->general->get_offset();
 		$limit 	= $this->general->get_limit();
-		$total 	= $this->model->count_all();
+		$total 	= $this->users_model->count_all();
 
 		$this->data['action'] = $this->data['index'].'/search'.get_query_string(null,'offset');
 		$this->data['action_delete'] = $this->data['index'].'/delete'.get_query_string();
@@ -42,7 +42,7 @@ class Users extends MY_Controller
 		}		
 		$heading[] = $this->lang->line('action');
 		$this->table->set_heading($heading);
-		$result = $this->model->get()->result();
+		$result = $this->users_model->get()->result();
 		$i=1+$offset;
 		foreach($result as $r){
 			$this->table->add_row(
@@ -70,7 +70,7 @@ class Users extends MY_Controller
 		$this->pagination->initialize($config); 
 		$this->data['pagination'] = $this->pagination->create_links();
 
-		$data['content'] = $this->load->view($this->data['index'].'/list',$this->data,true);
+		$data['content'] = $this->load->view($this->data['index'].'/users_list',$this->data,true);
 		$this->load->view('template',$data);
 	}
 	public function search(){
@@ -112,14 +112,14 @@ class Users extends MY_Controller
 			$this->data['breadcrumb'] = $this->data['index'].get_query_string();
 			$this->data['heading'] = $this->lang->line('new');
 			$this->data['owner'] = '';
-			$data['content'] = $this->load->view($this->data['index'].'/form',$this->data,true);
+			$data['content'] = $this->load->view($this->data['index'].'/users_form',$this->data,true);
 			$this->load->view('template',$data);
 		}else{
 			$data = $this->_field();
 			$data['password'] = md5($data['password']);
 			$data['user_create'] = $this->user_login['id'];
 			$data['date_create'] = date('Y-m-d H:i:s');
-			$this->model->add($data);
+			$this->users_model->add($data);
 			$this->session->set_flashdata('alert','<div class="alert alert-success">'.$this->lang->line('new_success').'</div>');
 			redirect($this->data['index'].'/add'.get_query_string());
 		}
@@ -127,14 +127,14 @@ class Users extends MY_Controller
 	public function edit($id){
 		$this->_set_rules();
 		if($this->form_validation->run()===false){
-			$this->data['row'] = $this->model->get_from_field('id',$id)->row();
+			$this->data['row'] = $this->users_model->get_from_field('id',$id)->row();
 			$this->data['add_btn'] = anchor(current_url(),$this->lang->line('edit'));
 			$this->data['list_btn'] = anchor($this->data['index'].get_query_string(),$this->lang->line('list'));
 			$this->data['action'] = $this->data['index'].'/edit/'.$id.get_query_string(); 
 			$this->data['breadcrumb'] = $this->data['index'].get_query_string();
 			$this->data['heading'] = $this->lang->line('edit');
 			$this->data['owner'] = owner($this->data['row']);
-			$data['content'] = $this->load->view($this->data['index'].'/form',$this->data,true);
+			$data['content'] = $this->load->view($this->data['index'].'/users_form',$this->data,true);
 			$this->load->view('template',$data);
 		}else{
 			$data = $this->_field();
@@ -144,19 +144,19 @@ class Users extends MY_Controller
 				unset($data['password']);
 			else
 				$data['password'] = md5($data['password']);
-			$this->model->edit($id,$data);
+			$this->users_model->edit($id,$data);
 			$this->session->set_flashdata('alert','<div class="alert alert-success">'.$this->lang->line('edit_success').'</div>');
 			redirect($this->data['index'].'/edit/'.$id.get_query_string());
 		}
 	}
 	public function delete($id=''){
 		if($id<>''){
-			$this->model->delete($id);
+			$this->users_model->delete($id);
 		}
 		$check = $this->input->post('check');
 		if($check<>''){
 			foreach($check as $c){
-				$this->model->delete($c);
+				$this->users_model->delete($c);
 			}
 		}
 		$this->session->set_flashdata('alert','<div class="alert alert-success">'.$this->lang->line('delete_success').'</div>');

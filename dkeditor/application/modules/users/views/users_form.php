@@ -1,4 +1,4 @@
-	<section class="content-header">
+<section class="content-header">
 	<h1>
 		<?php echo $title ?>
 		<small><?php echo $subtitle?></small>
@@ -16,11 +16,11 @@
 	</ul>
 	<?php echo $this->session->flashdata('alert')?>
 	<?php echo form_open($action)?>
-	<div class="box box-default">
-		<div class="box-header owner">
+	<div class="panel panel-default">
+		<div class="panel-heading owner">
 			<?php echo $owner?>
 		</div>
-		<div class="box-body">
+		<div class="panel-body">
 			<div class="form-group form-inline">
 				<?php echo form_label($this->lang->line('code'),'code',array('class'=>'control-label'))?>
 				<?php echo form_input(array('name'=>'code','class'=>'form-control input-sm','maxlength'=>'15','autocomplete'=>'off','value'=>set_value('code',(isset($row->code)?$row->code:'')),'required'=>'required','autofocus'=>'autofocus'))?>
@@ -59,7 +59,7 @@
 				<small><?php echo form_error('status')?></small>
 			</div>
 		</div>
-		<div class="box-footer">
+		<div class="panel-footer">
 			<button class="btn btn-success btn-sm" type="submit" onclick="return confirm('Are you sure')"><span class="glyphicon glyphicon-save"></span> <?php echo $this->lang->line('save'); ?></button>
 			<?php echo anchor($breadcrumb,'<span class="glyphicon glyphicon-repeat"></span> '.$this->lang->line('cancel'),array('class'=>'btn btn-danger btn-sm'))?>
 		</div>

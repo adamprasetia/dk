@@ -25,6 +25,7 @@ class Photo extends MY_Controller
 	public function upload()
 	{
 		$photo_form['action'] = 'photo/do_upload';
+		$photo_form['title'] = 'Unggah Foto';
 		$data['content'] = $this->load->view('photo_form',$photo_form,true);
 		$this->load->view('template',$data);		
 	}
@@ -33,8 +34,11 @@ class Photo extends MY_Controller
 		$result_upload = $this->upload_photo();
 		if ($result_upload['status'])
 		{
+			if ($result_upload['thumb']!==true) {
+				$this->session->set_flashdata('error',$result_upload['thumb']);
+			}
 			$field = $this->get_field('add');
-			$field['filename'] = date('Y').'\\'.date('m').'\\'.date('d').'\\'.$result_upload['message']['file_name'];
+			$field['filename'] = date('Y').'/'.date('m').'/'.date('d').'/'.$result_upload['message']['file_name'];
             $this->load->model('photo_model');
             $result_insert = $this->photo_model->insert($field);
             if ($result_insert==true) {
@@ -55,6 +59,7 @@ class Photo extends MY_Controller
 	public function edit($id)
 	{
 		$this->load->model('photo_model');
+		$photo_form['title'] = 'Edit Foto';
 		$photo_form['row'] = $this->photo_model->get_by_id($id)->row();
 		$photo_form['action'] = 'photo/do_edit/'.$id;
 		$data['content'] = $this->load->view('photo_form',$photo_form,true);
@@ -85,8 +90,14 @@ class Photo extends MY_Controller
 		$this->load->model('photo_model');
 		$row = $this->photo_model->get_by_id($id)->row();
 		$filepath = BASEDIR.'assets\\photo\\'.$row->filename;
+		$filepath_thumb = BASEDIR.'assets\\photo\\'.thumb($row->filename);
 		if (is_file($filepath)){
 			if (!unlink($filepath)) {
+				return false;
+			}
+		}
+		if (is_file($filepath_thumb)){
+			if (!unlink($filepath_thumb)) {
 				return false;
 			}
 		}
@@ -98,7 +109,11 @@ class Photo extends MY_Controller
 		if ($_FILES['userfile']['name']) {
 			$result_upload = $this->upload_photo();
 			if ($result_upload['status']) {
-				$field['filename'] = date('Y').'\\'.date('m').'\\'.date('d').'\\'.$result_upload['message']['file_name'];
+				$field['filename'] = date('Y').'/'.date('m').'/'.date('d').'/'.$result_upload['message']['file_name'];
+				$result_delete_photo = $this->delete_foto($id);
+				if (!$result_delete_photo) {
+					$this->session->set_flashdata('error','Gagal delete file lama');
+				}
 			}else{
 				$this->session->set_flashdata('error',$result_upload['message']);
 			}
@@ -138,8 +153,35 @@ class Photo extends MY_Controller
         {
         	$file_upload = $this->upload->data();
         	$return = array('status'=>1,'message'=>$file_upload);
+        	$result_thumb = $this->create_thumb($file_upload['file_name']);
+        	if ($result_thumb['status']) {
+        		$return['thumb']=true;
+        	}else{
+        		$return['thumb']=$result_thumb['message'];
+        	}
         }
     	return $return;
+	}
+	private function create_thumb($filename)
+	{
+		$source_path = BASEDIR.'assets\\photo\\'.date('Y').'\\'.date('m').'\\'.date('d').'\\'.$filename;
+		$thumb_path = BASEDIR.'assets\\thumb\\'.date('Y').'\\'.date('m').'\\'.date('d').'\\'.$filename;
+		$config['image_library'] = 'gd2';
+		$config['source_image'] = $source_path;
+		$config['create_thumb'] = TRUE;
+		$config['maintain_ratio'] = TRUE;
+        $config['overwrite'] = true;
+		$config['width'] = 300;
+		$config['height'] = 200;
+		$this->load->library('image_lib', $config);
+
+		$this->image_lib->resize();		
+		if (!$this->image_lib->resize()){
+		    $return = array('status'=>0,'message'=>$this->image_lib->display_errors());
+		}else{
+			$return = array('status'=>1,'message'=>'');
+		}
+		return $return;
 	}
 	private function get_field($type='add')
 	{
@@ -164,13 +206,15 @@ class Photo extends MY_Controller
 		$this->load->model('photo_model');
 		$total = $this->photo_model->count_all();
 		$total_page = ceil($total/$this->limit);
+		$data_photo = array('total'=>$total);
 		$data = array();
 		for ($i=0;$i<$total_page;$i++){
 			$offset = $i*$this->limit;
 			$result = $this->photo_model->get_gallery($this->limit,$offset)->result();
 			$data[$i] = $result;
 		}
-		$json_encode = json_encode($data);
+		$data_photo['list'] = $data;
+		$json_encode = json_encode($data_photo);
 		$upload_path = BASEDIR.'assets\\json';
 		if (!is_dir($upload_path)) {
 			mkdir($upload_path, 0755, true);

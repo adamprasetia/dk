@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Model extends CI_Model
+class Users_model extends CI_Model
 {
 	private $tbl_name = 'users';
 	private $tbl_key 	= 'id';
