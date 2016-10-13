@@ -132,11 +132,10 @@ class Photo extends MY_Controller
 	}
 	private function upload_photo()
 	{
-		$upload_path = BASEDIR.'assets\\photo\\'.date('Y').'\\'.date('m').'\\'.date('d');
+		$upload_path = BASEDIR.'assets/photo/'.date('Y').'/'.date('m').'/'.date('d');
 		if (!is_dir($upload_path)) {
 			mkdir($upload_path, 0777, true);
 		}
-		die($upload_path);
 		$config['upload_path'] = $upload_path;
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max_size'] = 2048;
