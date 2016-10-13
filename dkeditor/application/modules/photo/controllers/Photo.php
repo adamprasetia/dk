@@ -89,8 +89,8 @@ class Photo extends MY_Controller
 	{
 		$this->load->model('photo_model');
 		$row = $this->photo_model->get_by_id($id)->row();
-		$filepath = BASEDIR.'assets\\photo\\'.$row->filename;
-		$filepath_thumb = BASEDIR.'assets\\photo\\'.thumb($row->filename);
+		$filepath = BASEDIR.'assets/photo/'.$row->filename;
+		$filepath_thumb = BASEDIR.'assets/photo/'.thumb($row->filename);
 		if (is_file($filepath)){
 			if (!unlink($filepath)) {
 				return false;
@@ -163,8 +163,8 @@ class Photo extends MY_Controller
 	}
 	private function create_thumb($filename)
 	{
-		$source_path = BASEDIR.'assets\\photo\\'.date('Y').'\\'.date('m').'\\'.date('d').'\\'.$filename;
-		$thumb_path = BASEDIR.'assets\\thumb\\'.date('Y').'\\'.date('m').'\\'.date('d').'\\'.$filename;
+		$source_path = BASEDIR.'assets/photo/'.date('Y').'/'.date('m').'/'.date('d').'/'.$filename;
+		$thumb_path = BASEDIR.'assets/thumb/'.date('Y').'/'.date('m').'/'.date('d').'/'.$filename;
 		$config['image_library'] = 'gd2';
 		$config['source_image'] = $source_path;
 		$config['create_thumb'] = TRUE;
@@ -214,12 +214,12 @@ class Photo extends MY_Controller
 		}
 		$data_photo['list'] = $data;
 		$json_encode = json_encode($data_photo);
-		$upload_path = BASEDIR.'assets\\json';
+		$upload_path = BASEDIR.'assets/json';
 		if (!is_dir($upload_path)) {
 			mkdir($upload_path, 0755, true);
 		}
 		$this->load->helper('file');
-		if (!write_file(BASEDIR.'assets\\json\\photo.json', $json_encode))
+		if (!write_file(BASEDIR.'assets/json/photo.json', $json_encode))
 		{
 		    return false;
 		}
