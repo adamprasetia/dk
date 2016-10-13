@@ -136,7 +136,7 @@ class Photo extends MY_Controller
 		if (!is_dir($upload_path)) {
 			mkdir($upload_path, 0777, true);
 		}
-
+		die($upload_path);
 		$config['upload_path'] = $upload_path;
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max_size'] = 2048;
