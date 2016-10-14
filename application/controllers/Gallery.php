@@ -1,10 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Gallery extends CI_Controller 
-{
+class Gallery extends CI_Controller {
+
 	private $limit = 12;
+	
 	public function index()
+	{
+		$this->load->view('gallery_static_view');
+	}
+	public function index_dinamis()
 	{
 		$offset = ($this->input->get('offset')?$this->input->get('offset'):0);
 		$json = file_get_contents(base_url('assets/json/photo.json'));

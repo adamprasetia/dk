@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/carousel.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/style.css">
-	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/jquery/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/jquery/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-custom navbar-static-top">

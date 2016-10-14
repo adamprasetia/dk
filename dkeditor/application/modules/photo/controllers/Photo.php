@@ -38,7 +38,7 @@ class Photo extends MY_Controller
 				$this->session->set_flashdata('error',$result_upload['thumb']);
 			}
 			$field = $this->get_field('add');
-			$field['filename'] = $result_upload['message']['file_name'];
+			$field['filename'] = date('Y').'/'.date('m').'/'.date('d').'/'.$result_upload['message']['file_name'];
             $this->load->model('photo_model');
             $result_insert = $this->photo_model->insert($field);
             if ($result_insert==true) {
@@ -109,7 +109,7 @@ class Photo extends MY_Controller
 		if ($_FILES['userfile']['name']) {
 			$result_upload = $this->upload_photo();
 			if ($result_upload['status']) {
-				$field['filename'] = $result_upload['message']['file_name'];
+				$field['filename'] = date('Y').'/'.date('m').'/'.date('d').'/'.$result_upload['message']['file_name'];
 				$result_delete_photo = $this->delete_foto($id);
 				if (!$result_delete_photo) {
 					$this->session->set_flashdata('error','Gagal delete file lama');
@@ -132,7 +132,7 @@ class Photo extends MY_Controller
 	}
 	private function upload_photo()
 	{
-		$upload_path = BASEDIR.'assets/photo/';
+		$upload_path = BASEDIR.'assets/photo/'.date('Y').'/'.date('m').'/'.date('d');
 		if (!is_dir($upload_path)) {
 			mkdir($upload_path, 0777, true);
 		}
@@ -163,7 +163,7 @@ class Photo extends MY_Controller
 	}
 	private function create_thumb($filename)
 	{
-		$source_path = BASEDIR.'assets/photo/'.$filename;
+		$source_path = BASEDIR.'assets/photo/'.date('Y').'/'.date('m').'/'.date('d').'/'.$filename;
 		$config['image_library'] = 'gd2';
 		$config['source_image'] = $source_path;
 		$config['create_thumb'] = TRUE;
