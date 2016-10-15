@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="http://www.cianjurkab.go.id/images/cjr_icon.png" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/sticky-footer.css">
     <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/style.css">
 </head>
 <body>
@@ -31,11 +32,11 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><?php echo anchor('home','Home') ?></li>
-                <li><?php echo anchor('profil','Profil') ?></li>
-                <li><?php echo anchor('visimisi','Visi & Misi') ?></li>
-                <li><?php echo anchor('gallery','Galeri') ?></li>
-                <li><?php echo anchor('banksampah','Bank Sampah') ?></li>
+                <li class="active"><?php echo anchor('page/home','Home') ?></li>
+                <li><?php echo anchor('page/profil','Profil') ?></li>
+                <li><?php echo anchor('page/visimisi','Visi & Misi') ?></li>
+                <li><?php echo anchor('page/gallery','Galeri') ?></li>
+                <li><?php echo anchor('page/banksampah','Bank Sampah') ?></li>
               </ul>
             </div>
           </div>
@@ -54,8 +55,9 @@
           <img class="first-slide" src="<?php echo config_item('assets') ?>img/b1.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Kantor Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</h1>
-              <p>Mengenal lebih dalam Kantor Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
+              <img src="<?php echo config_item('assets') ?>img/logo.png">
+              <h1>Dinas Kebersihan dan Pertamanan</h1>
+              <p>Kabupaten Cianjur</p>
               <p><?php echo anchor('profil','Selengkapnya',array('class'=>'btn btn-lg btn-warning','role'=>'button')) ?></p>
             </div>
           </div>
@@ -64,8 +66,9 @@
           <img class="second-slide" src="<?php echo config_item('assets') ?>img/b3.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
+              <img src="<?php echo config_item('assets') ?>img/logo.png">
               <h1>Visi</h1>
-              <p>"Terwujudnya Cianjur yang Bersih, indah,dan nyaman menuju Cianjur yang lebih Sejahtera dan Berahlakul Karimah"</p>
+              <p>"Cianjur Lebih Maju dan Agamis"</p>
               <p><?php echo anchor('visimisi','Selengkapnya',array('class'=>'btn btn-lg btn-warning','role'=>'button')) ?></p>
             </div>
           </div>
@@ -87,19 +90,19 @@
       <div>
         <div class="row">
           <div class="col-lg-4">
-            <img class="img-circle" src="<?php echo config_item('assets') ?>img/p1.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="img-circle" src="<?php echo config_item('assets') ?>img/office/1.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Profil</h2>
             <p>Dinas Kebersihan dan Pertamanan merupakan urusan pelaksana otonom daerah di bidang kebersihan dan pertamanan</p>
             <p><?php echo anchor('profil','Selengkapnya &raquo;',array('class'=>'btn btn-lg btn-default','role'=>'button')) ?></p>
           </div>
           <div class="col-lg-4">
-            <img class="img-circle" src="<?php echo config_item('assets') ?>img/p3.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="img-circle" src="<?php echo config_item('assets') ?>img/kendaraan/2.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Visi & Misi</h2>
             <p>Terwujudnya Cianjur yang Bersih, indah,dan nyaman menuju Cianjur yang lebih Sejahtera dan Berahlakul Karimah</p>
             <p><?php echo anchor('visimisi','Selengkapnya &raquo;',array('class'=>'btn btn-lg btn-default','role'=>'button')) ?></p>
           </div>
           <div class="col-lg-4">
-            <img class="img-circle" src="<?php echo config_item('assets') ?>img/p2.jpg" alt="Generic placeholder image" width="140" height="140">
+            <img class="img-circle" src="<?php echo config_item('assets') ?>img/kegiatan/2.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Bank Sampah</h2>
             <p>Lebih baik hidup dari sampah, daripada hidup jadi sampah</p>
             <p><?php echo anchor('banksampah','Selengkapnya &raquo;',array('class'=>'btn btn-lg btn-default','role'=>'button')) ?></p>
@@ -148,13 +151,14 @@
 
       <hr>
 
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Kembali ke atas</a></p>
-        <p>&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
-      </footer>
-
     </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted pull-right"><a href="#">Kembali ke atas</a></p>
+      <p class="text-muted">&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
+    </div>
+  </footer> 
+
   <script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/jquery/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>

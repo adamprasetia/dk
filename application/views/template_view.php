@@ -11,6 +11,7 @@
 	<link rel="shortcut icon" href="http://www.cianjurkab.go.id/images/cjr_icon.png" type="image/x-icon"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/carousel.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/sticky-footer.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/style.css">
 	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/jquery/jquery-1.11.3.min.js"></script>
 </head>
@@ -33,11 +34,11 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-            <li <?php echo ($this->uri->segment(1)=='home'?'class="active"':'') ?>><?php echo anchor('home','Home') ?></li>
-            <li <?php echo ($this->uri->segment(1)=='profil'?'class="active"':'') ?>><?php echo anchor('profil','Profil') ?></li>
-            <li <?php echo ($this->uri->segment(1)=='visimisi'?'class="active"':'') ?>><?php echo anchor('visimisi','Visi & Misi') ?></li>
-            <li <?php echo ($this->uri->segment(1)=='gallery'?'class="active"':'') ?>><?php echo anchor('gallery','Galeri') ?></li>
-            <li <?php echo ($this->uri->segment(1)=='banksampah'?'class="active"':'') ?>><?php echo anchor('banksampah','Bank Sampah') ?></li>
+            <li <?php echo ($this->uri->segment(2)=='home'?'class="active"':'') ?>><?php echo anchor('page/home','Home') ?></li>
+            <li <?php echo ($this->uri->segment(2)=='profil'?'class="active"':'') ?>><?php echo anchor('page/profil','Profil') ?></li>
+            <li <?php echo ($this->uri->segment(2)=='visimisi'?'class="active"':'') ?>><?php echo anchor('page/visimisi','Visi & Misi') ?></li>
+            <li <?php echo ($this->uri->segment(2)=='gallery'?'class="active"':'') ?>><?php echo anchor('page/gallery','Galeri') ?></li>
+            <li <?php echo ($this->uri->segment(2)=='banksampah'?'class="active"':'') ?>><?php echo anchor('page/banksampah','Bank Sampah') ?></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -48,12 +49,13 @@
 				echo $content; 
 			}		
 		?>
-		<hr>
-		<footer>
-			<p class="pull-right"><a href="#">Kembali ke atas</a></p>
-			<p>&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
-		</footer>
 	</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted pull-right"><a href="#">Kembali ke atas</a></p>
+			<p class="text-muted">&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
+		</div>
+    </footer>	
 	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

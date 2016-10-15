@@ -22,12 +22,23 @@
         padding:12px;
         background:#fff;
     }
-  </style>    
-<div class="row" style="text-align:center; border-bottom:1px dashed #ccc;  padding:0 0 20px 0; margin-bottom:40px;">
-    <h3 style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">
-        Galeri Dinas Kebersihan dan Pertamanan
+    .row-heading{
+        text-align:center; 
+        border-bottom:1px dashed #ccc;  
+        padding:0 0 20px 0; 
+        margin-bottom:40px;
+    }
+    .row-heading h3{
+        font-family:'Bree Serif', 
+        arial; font-weight:bold; 
+        font-size:30px;
+    }
+</style>    
+<div class="row row-heading" >
+    <h3>
+        GALERI
     </h3>
-    <p>Kabupaten Cianjur</p>
+    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
 </div>
 
 <ul class="row first">

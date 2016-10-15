@@ -1,10 +1,14 @@
 <div class="visimisi">
-	<h3 class="text-center">VISI & MISI</h3>
-	<hr>
+	<div class="row row-heading" >
+	    <h3>
+	        VISI & MISI
+	    </h3>
+	    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
+	</div>			
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<img class="img-thumbnail" src="<?php echo config_item('assets') ?>img/c3.jpg">
+				<img class="img-thumbnail" src="<?php echo config_item('assets') ?>img/kendaraan/2.jpg">
 			</div>
 			<div class="col-md-6">
 				<h3 class="text-center">Visi</h3>

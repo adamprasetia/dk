@@ -1,10 +1,14 @@
 <div class="profil">
-	<h3 class="text-center">BANK SAMPAH</h3>
-	<hr>
+	<div class="row row-heading" >
+	    <h3>
+	        BANK SAMPAH
+	    </h3>
+	    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
+	</div>			
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/Ceb3lZbcvHU" frameborder="0" allowfullscreen></iframe>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/Ceb3lZbcvHU" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div class="col-md-6">
 				<p><strong>Bank Sampah</strong> diciptakan oleh Dinas Kebersihan dan dikelola menggunakan sistem perbankan</p>

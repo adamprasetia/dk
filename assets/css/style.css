@@ -1,3 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+  background:#ebebeb;
+}
+.row-heading{
+    text-align:center; 
+    border-bottom:1px dashed #ccc;  
+    padding:0 0 20px 0; 
+    margin-bottom:40px;
+}
+.row-heading h3{
+    font-family:'Bree Serif', 
+    arial; font-weight:bold; 
+    font-size:30px;
+}
 hr{
 	border-top : 1px solid #f37934;
 }
