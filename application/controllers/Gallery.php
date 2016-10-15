@@ -7,7 +7,8 @@ class Gallery extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('gallery_static_view');
+		$data['content'] = $this->load->view('gallery_static_view','',true);
+		$this->load->view('template_view',$data);
 	}
 	public function index_dinamis()
 	{
