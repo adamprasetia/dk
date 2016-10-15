@@ -23,23 +23,22 @@ class Page extends CI_Controller {
 	}	
 	public function gallery()
 	{
-		$data['content'] = $this->load->view('gallery_static_view','',true);
-		$this->load->view('template_view',$data);
-		// $offset = ($this->input->get('offset')?$this->input->get('offset'):0);
-		// $json = file_get_contents(base_url('assets/json/photo.json'));
-		// $list = json_decode($json);
-		// $gallery_view['list'] = $list->list[$offset/$this->limit];
-		// $total = $list->total;
-		// $config = pag_tmp();
-		// $config['base_url'] = 'gallery';
-		// $config['total_rows'] = $total;
-		// $config['per_page'] = $this->limit;
-		// $this->load->library('pagination');
-		// $this->pagination->initialize($config); 
-		// $gallery_view['pagination'] = $this->pagination->create_links();
+		$limit = 12;
+		$offset = ($this->input->get('offset')?$this->input->get('offset'):0);
+		$json = file_get_contents(base_url('assets/json/photo.json'));
+		$list = json_decode($json);
+		$gallery_view['list'] = $list->list[$offset/$limit];
+		$total = $list->total;
+		$config = pag_tmp();
+		$config['base_url'] = 'page/gallery';
+		$config['total_rows'] = $total;
+		$config['per_page'] = $limit;
+		$this->load->library('pagination');
+		$this->pagination->initialize($config); 
+		$gallery_view['pagination'] = $this->pagination->create_links();
 
-		// $data['content'] = $this->load->view('gallery_view',$gallery_view,true);
-		// $this->load->view('template_view',$data);
+		$data['content'] = $this->load->view('gallery_view',$gallery_view,true);
+		$this->load->view('template_view',$data);
 	}
 	public function banksampah()
 	{

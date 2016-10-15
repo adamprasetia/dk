@@ -10,8 +10,8 @@
 </section>
 <section class="content">
 	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation"><?php echo $add_btn ?></li>
 		<li role="presentation" class="active"><?php echo $list_btn ?></li>
+		<li role="presentation"><?php echo $add_btn ?></li>
 	</ul>
 	<?php echo $this->session->flashdata('alert')?>
 	<div class="panel panel-default">

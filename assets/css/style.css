@@ -154,3 +154,32 @@ fieldset[disabled] .navbar-custom .btn-link:focus {
 .bg-orange{
   background-color: #f37934;
 }
+
+ul.first {
+    padding:0 0 0 0;
+    margin:0 0 40px 0;
+}
+ul.first li {
+    list-style:none;
+    margin-bottom:10px;
+}
+
+.text {
+    /*font-family: 'Bree Serif';*/
+    color:#666;
+    font-size:11px;
+    margin-bottom:10px;
+    padding:12px;
+    background:#fff;
+}
+.row-heading{
+    text-align:center; 
+    border-bottom:1px dashed #ccc;  
+    padding:0 0 20px 0; 
+    margin-bottom:40px;
+}
+.row-heading h3{
+    font-family:'Bree Serif', 
+    arial; font-weight:bold; 
+    font-size:30px;
+}

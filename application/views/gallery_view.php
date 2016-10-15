@@ -1,23 +1,29 @@
-<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/lightbox-4.0.2/ekko-lightbox.min.css">
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Galeri</h1>
-    </div>
+<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/bootstrap-photo-gallery/jquery.bsPhotoGallery.css">
+<div class="row row-heading" >
+    <h3>
+        GALERI
+    </h3>
+    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
+</div>
+
+<ul class="row first">
     <?php foreach ($list as $row): ?>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="<?php echo config_item('assets').'photo/'.$row->filename ?>" data-toggle="lightbox" data-gallery="example-gallery"  data-title="<?php echo $row->title ?>" data-footer="<?php echo $row->desc ?>">
-                <img class="img-responsive img-fluid" src="<?php echo config_item('assets').'photo/'.thumb($row->filename) ?>" alt="<?php echo $row->title ?>">
-            </a>
-        </div>
+    <li>
+        <img alt="<?php echo $row->title ?>" src="<?php echo config_item('assets').'photo/'.$row->filename ?>">
+        <div class="text"><?php echo $row->desc ?></div>
+    </li>
     <?php endforeach ?>
-    <div class="col-lg-12">
-        <?php echo $pagination ?>
-    </div>
-</div>        
-<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/lightbox-4.0.2/ekko-lightbox.min.js"></script>
-<script type="text/javascript">
-    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
+</ul>
+<div class="col-lg-12">
+    <?php echo $pagination ?>
+</div>
+<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-photo-gallery/jquery.bsPhotoGallery.js"></script>
+<script>
+$(document).ready(function(){
+    $('ul.first').bsPhotoGallery({
+      "classes" : "col-lg-2 col-md-4 col-sm-3 col-xs-4 col-xxs-12",
+      "hasModal" : true
     });
+});
 </script>
