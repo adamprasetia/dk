@@ -5,11 +5,17 @@ class Page extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('home_view');
+		$json = file_get_contents(base_url('assets/json/photo.json'));
+		$list = json_decode($json);
+		$data['list'] = $list->list[0];
+		$this->load->view('home_view',$data);
 	}
 	public function home()
 	{
-		$this->load->view('home_view');
+		$json = file_get_contents(base_url('assets/json/photo.json'));
+		$list = json_decode($json);
+		$data['list'] = $list->list[0];
+		$this->load->view('home_view',$data);
 	}
 	public function profil()
 	{

@@ -10,8 +10,9 @@
 	<title>Dinas Kebersihan Kabupaten Cianjur</title>
 	<link rel="shortcut icon" href="http://www.cianjurkab.go.id/images/cjr_icon.png" type="image/x-icon"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/carousel.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/sticky-footer.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/freebie-footer-templates/css/footer.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/style.css">
 	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/jquery/jquery-1.11.3.min.js"></script>
 </head>
@@ -43,19 +44,55 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
-	<div class="container marketing">
+	<div class="container">
 		<?php 
 			if (isset($content)) {
 				echo $content; 
 			}		
 		?>
 	</div>
-	<footer class="footer">
-		<div class="container">
-			<p class="text-muted pull-right"><a href="#">Kembali ke atas</a></p>
-			<p class="text-muted">&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
-		</div>
-    </footer>	
+    <footer class="footer-distributed">
+        <div class="footer-left">        
+            <h3>Dinas<span>Kebersihan</span>dan<span>Pertamanan</span></h3>
+            <p class="footer-links">
+                <?php echo anchor('page/home','Home') ?>
+                ·
+                <?php echo anchor('page/profil','Profil') ?>
+                ·
+                <?php echo anchor('page/visimisi','Visi & Misi') ?>
+                ·
+                <?php echo anchor('page/gallery','Galeri') ?>
+            </p>
+            <p class="footer-company-name">Dinas Kebersihan dan Pertamanan Kabupaten Cianjur &copy; 2016</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Jl. Perintis Kemerdekaan</span> Jebrod, Cianjur</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(0263) 265110</p>
+            </div>
+
+<!--             <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+ -->        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Dinas Kebersihan dan Pertamanan Kabuaten Cianjur</span>
+                Merupakan urusan pelaksana otonom daerah di bidang kebersihan dan pertamanan.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

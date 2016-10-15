@@ -156,12 +156,11 @@ fieldset[disabled] .navbar-custom .btn-link:focus {
 }
 
 ul.first {
-    padding:0 0 0 0;
-    margin:0 0 40px 0;
+  padding:0 0 0 0;
 }
 ul.first li {
-    list-style:none;
-    margin-bottom:10px;
+  list-style:none;
+  margin-bottom:10px;
 }
 
 .text {
@@ -179,6 +178,16 @@ ul.first li {
     margin-bottom:40px;
 }
 .row-heading h3{
+    color : #f37934;
+    font-family:'Bree Serif', 
+    arial; font-weight:bold; 
+    font-size:30px;
+}
+.row-headline{
+    text-align:center; 
+    padding:0 0 20px 0; 
+}
+.row-headline h3{
     font-family:'Bree Serif', 
     arial; font-weight:bold; 
     font-size:30px;
