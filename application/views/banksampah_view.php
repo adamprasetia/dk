@@ -1,11 +1,11 @@
-<div class="profil">
-	<div class="row row-heading" >
-	    <h3>
-	        BANK SAMPAH
-	    </h3>
-	    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
-	</div>			
-	<div class="container">
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="row row-heading" >
+		    <h3>
+		        BANK SAMPAH
+		    </h3>
+		    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
+		</div>			
 		<div class="row">
 			<div class="col-md-6">
 				<iframe width="100%" height="315" src="https://www.youtube.com/embed/Ceb3lZbcvHU" frameborder="0" allowfullscreen></iframe>

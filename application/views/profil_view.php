@@ -1,11 +1,11 @@
-<div class="profil">
-	<div class="row row-heading" >
-	    <h3>
-	        PROFIL
-	    </h3>
-	    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
-	</div>			
-	<div class="container">
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="row row-heading" >
+		    <h3>
+		        PROFIL
+		    </h3>
+		    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
+		</div>			
 		<div class="row">
 			<div class="col-md-6">
 				<img class="img-thumbnail" src="<?php echo config_item('assets') ?>img/office/2.jpg" class="img-thumbnail">
