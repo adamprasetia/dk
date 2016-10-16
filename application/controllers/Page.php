@@ -3,19 +3,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends CI_Controller {
 
+	private function get_data()
+	{
+		/* Photo */
+		$json = file_get_contents(base_url('assets/json/photo.json'));
+		$photo = json_decode($json);
+		$data['list'] = $photo->list[0];
+
+		/* Article */
+		$json = file_get_contents(base_url('assets/json/article.json'));
+		$article = json_decode($json);
+		$data['article'] = $article->list[0];
+
+		return $data;
+	}
 	public function index()
 	{
-		$json = file_get_contents(base_url('assets/json/photo.json'));
-		$list = json_decode($json);
-		$data['list'] = $list->list[0];
+		$data = $this->get_data();
 		$this->load->view('home_view',$data);
 	}
 	public function home()
 	{
-		$json = file_get_contents(base_url('assets/json/photo.json'));
-		$list = json_decode($json);
-		$data['list'] = $list->list[0];
+		$data = $this->get_data();
 		$this->load->view('home_view',$data);
+	}
+	public function article($id)
+	{
+		/* Article */
+		$json = file_get_contents(base_url('assets/json/article_'.$id.'.json'));
+		$article = json_decode($json);
+		$article_view['article'] = $article;
+
+		/* Article Lain */
+		$json = file_get_contents(base_url('assets/json/article.json'));
+		$article = json_decode($json);
+		$article_view['article_lain'] = $article->list[0];
+
+		$data['content'] = $this->load->view('article_view',$article_view,true);
+		$this->load->view('template_view',$data);
 	}
 	public function profil()
 	{

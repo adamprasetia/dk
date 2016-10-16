@@ -10,6 +10,8 @@
 	<title>Dinas Kebersihan Kabupaten Cianjur</title>
 	<link rel="shortcut icon" href="http://www.cianjurkab.go.id/images/cjr_icon.png" type="image/x-icon"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/headline.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/freebie-footer-templates/css/footer.css">

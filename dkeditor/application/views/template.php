@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/style.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>dkeditor/css/style.css">
 	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/jquery/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>	
 </head>
 <body>
 	<nav class="navbar navbar-custom navbar-static-top">
@@ -32,7 +33,7 @@
 				<ul class="nav navbar-nav">
 					<li <?php echo ($this->uri->segment(1)=='home'?'class="active"':'') ?>><?php echo anchor('home','Beranda') ?></li>
 					<li <?php echo ($this->uri->segment(1)=='users'?'class="active"':'') ?>><?php echo anchor('users','Users') ?></li>
-					<li <?php echo ($this->uri->segment(1)=='artikel'?'class="active"':'') ?>><?php echo anchor('artikel','Artikel') ?></li>
+					<li <?php echo ($this->uri->segment(1)=='article'?'class="active"':'') ?>><?php echo anchor('article','Artikel') ?></li>
 					<li <?php echo ($this->uri->segment(1)=='photo'?'class="active"':'') ?>><?php echo anchor('photo','Foto') ?></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -59,6 +60,5 @@
 			<p>&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
 		</footer>
 	</div>
-	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

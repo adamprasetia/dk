@@ -192,3 +192,6 @@ ul.first li {
     arial; font-weight:bold; 
     font-size:30px;
 }
+.media-list a{
+    color:#666;
+}

@@ -150,35 +150,21 @@
                             <p>Berita Seputar Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
                         </div>
                         <div class="row">
+                          <div class="col-md-12">
                             <ul class="media-list main-list">
-                              <li class="media">
-                                <a class="pull-left" href="#">
-                                  <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                                </a>
-                                <div class="media-body">
-                                  <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
-                                  <p class="by-author">By Jhon Doe</p>
-                                </div>
-                              </li>
-                              <li class="media">
-                                <a class="pull-left" href="#">
-                                  <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                                </a>
-                                <div class="media-body">
-                                  <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
-                                  <p class="by-author">By Jhon Doe</p>
-                                </div>
-                              </li>
-                              <li class="media">
-                                <a class="pull-left" href="#">
-                                  <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                                </a>
-                                <div class="media-body">
-                                  <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
-                                  <p class="by-author">By Jhon Doe</p>
-                                </div>
-                              </li>
+                              <?php foreach ($article as $row): ?>
+                                <li class="media">
+                                  <div class="pull-left">
+                                    <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="150" height="90">
+                                  </div>
+                                  <div class="media-body">
+                                    <h4 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h4>
+                                    <p class="by-author">Penulis : <?php echo $row->author ?></p>
+                                  </div>
+                                </li>                                
+                              <?php endforeach ?>
                             </ul>
+                          </div>  
                         </div>   
                     </div>
                     <div class="panel-footer">
