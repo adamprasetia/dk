@@ -33,6 +33,11 @@
 				<textarea id="content" name="content"><?php echo set_value('content',(isset($row->content)?$row->content:'')) ?></textarea>
 			</div>
 			<div class="form-group form-inline">
+				<?php echo form_label('Masuk headline','is_headline',array('class'=>'control-label'))?>
+				<?php echo form_checkbox(array('name'=>'is_headline','value'=>'1','checked'=>set_value('is_headline',(isset($row->is_headline) && $row->is_headline==1?true:false))))?>
+				<small><?php echo form_error('is_headline')?></small>
+			</div>
+			<div class="form-group form-inline">
 				<?php echo form_label('Status','status',array('class'=>'control-label'))?>
 				<?php echo form_dropdown('status',$this->general_model->dropdown('article_status','Status'),set_value('status',(isset($row->status)?$row->status:'')),'required=required class="form-control input-sm"')?>
 				<small><?php echo form_error('status')?></small>

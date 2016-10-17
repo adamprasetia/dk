@@ -77,11 +77,17 @@ class Article extends MY_Controller
 			'content' => $this->input->post('content'),
 			'status' => $this->input->post('status')
 		);
+        if ($this->input->post('is_headline')) {            	
+        	$data['is_headline'] = $this->input->post('is_headline');
+        }else{
+        	$data['is_headline'] = 0;
+        }		
 		return $data;		
 	}
 	private function _set_rules(){
 		$this->form_validation->set_rules('title','Judul','required|trim');
 		$this->form_validation->set_rules('content','Konten','required|trim');
+		$this->form_validation->set_rules('is_headline','Masuk Headline','trim');
 		$this->form_validation->set_rules('status','Status','required');
 		$this->form_validation->set_error_delimiters('<p class="error">','</p>');
 	}
@@ -102,6 +108,7 @@ class Article extends MY_Controller
 			$data['date_create'] = date('Y-m-d H:i:s');
 			$id = $this->article_model->add($data);
 			$this->generate_form_json($id);
+			$this->generate_headline_json();
 			$this->generate_json();
 			$this->session->set_flashdata('alert','<div class="alert alert-success">'.$this->lang->line('new_success').'</div>');
 			redirect($this->data['index'].'/add'.get_query_string());
@@ -125,6 +132,7 @@ class Article extends MY_Controller
 			$data['date_update'] = date('Y-m-d H:i:s');
 			$this->article_model->edit($id,$data);
 			$this->generate_form_json($id);
+			$this->generate_headline_json();
 			$this->generate_json();
 			$this->session->set_flashdata('alert','<div class="alert alert-success">'.$this->lang->line('edit_success').'</div>');
 			redirect($this->data['index'].'/edit/'.$id.get_query_string());
@@ -140,6 +148,7 @@ class Article extends MY_Controller
 				$this->article_model->delete($c);
 			}
 		}
+		$this->generate_headline_json();
 		$this->generate_json();
 		$this->session->set_flashdata('alert','<div class="alert alert-success">'.$this->lang->line('delete_success').'</div>');
 		redirect($this->data['index'].get_query_string());
@@ -155,6 +164,30 @@ class Article extends MY_Controller
 		}
 		$this->load->helper('file');
 		if (!write_file(BASEDIR.'assets/json/article_'.$id.'.json', $json_encode))
+		{
+		    return false;
+		}
+		return true;
+	}
+	public function generate_headline_json()
+	{
+		$this->load->model('article_model');
+		$data = $this->article_model->get_article_headline()->result();
+		$i=0;
+		foreach ($data as $row) {
+			preg_match_all('/<img[^>]+>/i',$row->content, $img);
+		    preg_match_all('/src=("[^"]*")/i',$img[0][0], $src);
+			$data[$i]->image = trim($src[1][0],'"');
+			$i++;
+		}
+
+		$json_encode = json_encode($data);
+		$upload_path = BASEDIR.'assets/json';
+		if (!is_dir($upload_path)) {
+			mkdir($upload_path, 0755, true);
+		}
+		$this->load->helper('file');
+		if (!write_file(BASEDIR.'assets/json/article_headline.json', $json_encode))
 		{
 		    return false;
 		}
@@ -192,10 +225,4 @@ class Article extends MY_Controller
 		}
 		return true;
 	}	
-	function tes(){
-		$this->load->model('article_model');
-		$result = $this->article_model->get_article(10,0)->result();
-		$result[0]->image = 'adam prasetia';
-		echo "<pre>";var_dump($result);exit;
-	}
 }

@@ -32,8 +32,17 @@ class Article_model extends CI_Model
 	public function get_article($limit=10,$offset=0)
 	{
 		$this->query();
+		$this->db->where('a.status',1);
 		$this->db->limit($limit);
 		$this->db->offset($offset);
+		return $this->db->get();
+	}
+	public function get_article_headline()
+	{
+		$this->query();
+		$this->db->where('a.status',1);
+		$this->db->where('is_headline',1);
+		$this->db->limit(4);
 		return $this->db->get();
 	}
 	public function get_article_by_id($id)

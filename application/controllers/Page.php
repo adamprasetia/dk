@@ -10,6 +10,11 @@ class Page extends CI_Controller {
 		$photo = json_decode($json);
 		$data['list'] = $photo->list[0];
 
+		/* Headline */
+		$json = file_get_contents(base_url('assets/json/article_headline.json'));
+		$article_headline = json_decode($json);
+		$data['article_headline'] = $article_headline;
+		
 		/* Article */
 		$json = file_get_contents(base_url('assets/json/article.json'));
 		$article = json_decode($json);

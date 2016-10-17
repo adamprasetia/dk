@@ -10,6 +10,7 @@
 	<title>Dinas Kebersihan Kabupaten Cianjur</title>
 	<link rel="shortcut icon" href="http://www.cianjurkab.go.id/images/cjr_icon.png" type="image/x-icon"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/sticky-footer.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/style.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>dkeditor/css/style.css">
 	<script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/jquery/jquery-3.1.1.min.js"></script>
@@ -55,10 +56,11 @@
 				echo $content; 
 			}		
 		?>
-		<hr>
-		<footer>
-			<p>&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
-		</footer>
 	</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">&copy; 2016 Dinas Kebersihan dan Pertamanan Kabupaten Cianjur.</p>
+		</div>
+    </footer>	
 </body>
 </html>

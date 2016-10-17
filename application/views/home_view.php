@@ -100,46 +100,31 @@
                             <p>Berita Pilihan Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 col-lg-7">
-                                <div class="featured-article">
-                                    <a href="#">
-                                        <img src="http://placehold.it/482x350" alt="" class="thumb">
-                                    </a>
-                                    <div class="block-title">
-                                        <h2>Lorem ipsum dolor asit amet</h2>
-                                        <p class="by-author"><small>By Jhon Doe</small></p>
+                            <?php $i=1;foreach ($article_headline as $row): ?>
+                                <?php if ($i==1): ?>
+                                    <div class="col-md-12 col-lg-7">
+                                        <div class="featured-article">
+                                            <img src="<?php echo $row->image ?>" alt="" class="thumb" width="482" height="350">
+                                            <div class="block-title">
+                                                <h2><?php echo anchor('page/article/'.$row->id,$row->title) ?></h2>
+                                                <p class="by-author"><small>Penulis : <?php echo $row->author ?></small></p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-lg-5">
-                                <ul class="media-list main-list">
-                                  <li class="media">
-                                    <a class="pull-left" href="#">
-                                      <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                                    </a>
+                                    <div class="col-md-12 col-lg-5">
+                                        <ul class="media-list main-list">                                    
+                                <?php else: ?>
+                                    <li class="media">
+                                    <div class="pull-left">
+                                      <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="150" height="90">
+                                    </div>
                                     <div class="media-body">
-                                      <h5 class="media-heading">Lorem ipsum dolor asit amet</h5>
-                                      <p class="by-author">By Jhon Doe</p>
+                                      <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
+                                      <p class="by-author">Penulis : <?php echo $row->author ?></p>
                                     </div>
-                                  </li>
-                                  <li class="media">
-                                    <a class="pull-left" href="#">
-                                      <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                                    </a>
-                                    <div class="media-body">
-                                      <h5 class="media-heading">Lorem ipsum dolor asit amet</h5>
-                                      <p class="by-author">By Jhon Doe</p>
-                                    </div>
-                                  </li>
-                                  <li class="media">
-                                    <a class="pull-left" href="#">
-                                      <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                                    </a>
-                                    <div class="media-body">
-                                      <h5 class="media-heading">Lorem ipsum dolor asit amet</h5>
-                                      <p class="by-author">By Jhon Doe</p>
-                                    </div>
-                                  </li>
+                                    </li>                                    
+                                <?php endif ?>
+                            <?php $i++;endforeach ?>
                                 </ul>
                             </div>
                         </div>            
@@ -245,12 +230,12 @@
     <script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-photo-gallery/jquery.bsPhotoGallery.js"></script>
     <script>
-    $(document).ready(function(){
-        $('ul.first').bsPhotoGallery({
-          "classes" : "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12",
-          "hasModal" : true
-        });
-    });
+        $(document).ready(function(){
+            $('ul.first').bsPhotoGallery({
+              "classes" : "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12",
+              "hasModal" : true
+            });
+        });        
     </script>
 </body>
 </html>
