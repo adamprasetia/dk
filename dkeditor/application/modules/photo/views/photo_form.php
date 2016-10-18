@@ -9,16 +9,16 @@
     </ol>
 </section>
 <section class="content">
-	<ul class="nav nav-tabs">
-		<li role="presentation"><?php echo anchor('photo','Daftar Foto') ?></li>
-		<li role="presentation" class="active"><?php echo anchor('photo/upload',$title) ?></li>
-	</ul>
 	<?php if ($this->session->flashdata('success')): ?>
 		<div class="alert alert-success" role="alert"><?php echo $this->session->flashdata('success') ?></div>
 	<?php endif ?>
 	<?php if ($this->session->flashdata('error')): ?>
 		<div class="alert alert-danger" role="alert"><?php echo $this->session->flashdata('error') ?></div>
 	<?php endif ?>
+	<ul class="nav nav-tabs">
+		<li role="presentation"><?php echo anchor('photo','Daftar Foto') ?></li>
+		<li role="presentation" class="active"><?php echo anchor('photo/upload',$title) ?></li>
+	</ul>
 	<?php echo form_open_multipart($action)?>
 	<div class="panel panel-default">
 		<div class="panel-heading">

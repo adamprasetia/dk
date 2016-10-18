@@ -31,18 +31,24 @@
 			    </button>
                 <a class="navbar-brand" href="<?php echo base_url() ?>">
                     <img alt="Brand" src="<?php echo config_item('assets') ?>img/logo.png">
-                </a>              
+                </a>   
+                <p class="navbar-text hidden-lg hidden-md hidden-sm">Dinas Kebersihan dan Pertamanan Cianjur</p>           
 		    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-            <li <?php echo ($this->uri->segment(2)=='home'?'class="active"':'') ?>><?php echo anchor('page/home','Home') ?></li>
-            <li <?php echo ($this->uri->segment(2)=='profil'?'class="active"':'') ?>><?php echo anchor('page/profil','Profil') ?></li>
-            <li <?php echo ($this->uri->segment(2)=='visimisi'?'class="active"':'') ?>><?php echo anchor('page/visimisi','Visi & Misi') ?></li>
-            <li <?php echo ($this->uri->segment(2)=='gallery'?'class="active"':'') ?>><?php echo anchor('page/gallery','Galeri') ?></li>
-            <li <?php echo ($this->uri->segment(2)=='banksampah'?'class="active"':'') ?>><?php echo anchor('page/banksampah','Bank Sampah') ?></li>
-	      </ul>
+            <ul class="nav navbar-nav">
+                <li <?php echo ($this->uri->segment(2)=='home'?'class="active"':'') ?>><?php echo anchor('page/home','Home') ?></li>
+                <li <?php echo ($this->uri->segment(2)=='profil'?'class="active"':'') ?>><?php echo anchor('page/profil','Profil') ?></li>
+                <li <?php echo ($this->uri->segment(2)=='visimisi'?'class="active"':'') ?>><?php echo anchor('page/visimisi','Visi & Misi') ?></li>
+                <li <?php echo ($this->uri->segment(2)=='gallery'?'class="active"':'') ?>><?php echo anchor('page/gallery','Galeri') ?></li>
+                <li <?php echo ($this->uri->segment(2)=='banksampah'?'class="active"':'') ?>><?php echo anchor('page/banksampah','Bank Sampah') ?></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
+                <li><?php echo anchor('contact_us','Hubungi Kami') ?></li>
+                <li><?php echo anchor('site_map','Peta Situs') ?></li>
+            </ul>          
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
@@ -55,7 +61,7 @@
 	</div>
     <footer class="footer-distributed">
         <div class="footer-left">        
-            <h3>Dinas<span>Kebersihan</span>dan<span>Pertamanan</span></h3>
+            <h3 class="hidden-xs">Dinas<span>Kebersihan</span>dan<span>Pertamanan</span></h3>
             <p class="footer-links">
                 <?php echo anchor('page/home','Home') ?>
                 ·
@@ -85,7 +91,7 @@
  -->        </div>
         <div class="footer-right">
             <p class="footer-company-about">
-                <span>Dinas Kebersihan dan Pertamanan Kabuaten Cianjur</span>
+                <span>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</span>
                 Merupakan urusan pelaksana otonom daerah di bidang kebersihan dan pertamanan.
             </p>
             <div class="footer-icons">

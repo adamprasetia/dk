@@ -15,6 +15,10 @@
 .control-label{
 	min-width:150px;
 }
+.error{
+	color:red;
+	margin-left:155px;
+}
 .table-filter{
 	margin-bottom:10px;
 }

@@ -29,7 +29,7 @@
 		                            <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="150" height="90">
 		                          </div>
 		                          <div class="media-body">
-		                            <h4 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h4>
+		                            <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
 		                            <p class="by-author">Penulis : <?php echo $row->author ?></p>
 		                          </div>
 		                        </li>                                

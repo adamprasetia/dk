@@ -32,7 +32,8 @@
               </button>
               <a class="navbar-brand" href="<?php echo base_url() ?>">
                   <img alt="Brand" src="<?php echo config_item('assets') ?>img/logo.png">
-              </a>              
+              </a>
+              <p class="navbar-text hidden-lg hidden-md hidden-sm">Dinas Kebersihan dan Pertamanan Cianjur</p>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -41,6 +42,11 @@
               <li><?php echo anchor('page/visimisi','Visi & Misi') ?></li>
               <li><?php echo anchor('page/gallery','Galeri') ?></li>
               <li><?php echo anchor('page/banksampah','Bank Sampah') ?></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
+              <li><?php echo anchor('contact_us','Hubungi Kami') ?></li>
+              <li><?php echo anchor('site_map','Peta Situs') ?></li>
             </ul>
           </div>
         </div>
@@ -60,8 +66,8 @@
         <div class="container">
           <div class="carousel-caption">
             <img src="<?php echo config_item('assets') ?>img/logo.png">
-            <h1>Dinas Kebersihan dan Pertamanan</h1>
-            <p>Kabupaten Cianjur</p>
+            <h1>Profil</h1>
+            <p>Dinas Pendidikan dan Pertamanan Kabupaten Cianjur</p>
             <p><?php echo anchor('page/profil','Selengkapnya',array('class'=>'btn btn-lg btn-warning','role'=>'button')) ?></p>
           </div>
         </div>
@@ -143,7 +149,7 @@
                                     <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="150" height="90">
                                   </div>
                                   <div class="media-body">
-                                    <h4 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h4>
+                                    <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
                                     <p class="by-author">Penulis : <?php echo $row->author ?></p>
                                   </div>
                                 </li>                                
@@ -186,7 +192,7 @@
 
     <footer class="footer-distributed">
         <div class="footer-left">        
-            <h3>Dinas<span>Kebersihan</span>dan<span>Pertamanan</span></h3>
+            <h3 class="hidden-xs">Dinas<span>Kebersihan</span>dan<span>Pertamanan</span></h3>
             <p class="footer-links">
                 <?php echo anchor('page/home','Home') ?>
                 ·
@@ -216,7 +222,7 @@
  -->        </div>
         <div class="footer-right">
             <p class="footer-company-about">
-                <span>Dinas Kebersihan dan Pertamanan Kabuaten Cianjur</span>
+                <span>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</span>
                 Merupakan urusan pelaksana otonom daerah di bidang kebersihan dan pertamanan.
             </p>
             <div class="footer-icons">

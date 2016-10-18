@@ -195,3 +195,10 @@ ul.first li {
 .media-list a{
     color:#666;
 }
+.control-label{
+  min-width:150px;
+}
+.error{
+  color:red;
+  margin-left:155px;
+}
