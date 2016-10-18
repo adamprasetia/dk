@@ -10,6 +10,28 @@ class Buku_tamu extends CI_Controller {
 	}
 	public function index()
 	{
+		$this->load->model('buku_tamu_model');
+		$offset = $this->general->get_offset();
+		$limit 	= $this->general->get_limit();
+		$total 	= $this->buku_tamu_model->count_all();
+
+		$result = $this->buku_tamu_model->get()->result();
+		$buku_tamu_view['result'] = $result;
+
+		$this->load->library('pagination');
+		$config = pag_tmp();
+		$config['base_url'] = 'buku_tamu';
+		$config['total_rows'] = $total;
+		$config['per_page'] = $limit;
+
+		$this->pagination->initialize($config); 
+		$buku_tamu_view['pagination'] = $this->pagination->create_links();
+
+		$data['content'] = $this->load->view('buku_tamu_view',$buku_tamu_view,true);
+		$this->load->view('template_view',$data);								
+	}
+	public function create()
+	{
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name','Nama Lengkap','required|trim|max_length[100]');
 		$this->form_validation->set_rules('email','Email','required|trim|valid_email|max_length[150]');
@@ -21,21 +43,21 @@ class Buku_tamu extends CI_Controller {
 
 		if ($this->form_validation->run()===false) {
 			$buku_tamu_view['captcha'] = $this->gen_captcha();
-			$data['content'] = $this->load->view('buku_tamu_view',$buku_tamu_view,true);
+			$data['content'] = $this->load->view('buku_tamu_form_view',$buku_tamu_view,true);
 			$this->load->view('template_view',$data);						
 		}else{
 			$data = array(
-				'name'=>$this->input->post('name'),
-				'email'=>$this->input->post('email'),
-				'address'=>$this->input->post('address'),
-				'message'=>$this->input->post('message'),
+				'name'=>$this->input->post('name',true),
+				'email'=>$this->input->post('email',true),
+				'address'=>$this->input->post('address',true),
+				'message'=>$this->input->post('message',true),
 				'date_create'=>date('Y-m-d H:i:s')
 
 			);
 			$this->load->model('buku_tamu_model');
 			$this->buku_tamu_model->add($data);
 			$this->session->set_flashdata('success','Pesan anda sudah terkirim, Terima kasih');
-			redirect('buku_tamu');
+			redirect('buku_tamu/create');
 		}
 	}
 	private function gen_captcha()
