@@ -85,4 +85,9 @@ class Page extends CI_Controller {
 		$data['content'] = $this->load->view('banksampah_view','',true);
 		$this->load->view('template_view',$data);
 	}	
+	public function sitemap()
+	{
+		$data['content'] = $this->load->view('sitemap_view','',true);
+		$this->load->view('template_view',$data);
+	}	
 }

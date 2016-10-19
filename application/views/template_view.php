@@ -46,8 +46,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li <?php echo ($this->uri->segment(1)=='buku_tamu'?'class="active"':'') ?>><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
-                <li <?php echo ($this->uri->segment(2)=='contact_us'?'class="active"':'') ?>><?php echo anchor('contact_us','Hubungi Kami') ?></li>
-                <li <?php echo ($this->uri->segment(2)=='site_map'?'class="active"':'') ?>><?php echo anchor('site_map','Peta Situs') ?></li>
+                <li <?php echo ($this->uri->segment(1)=='contact_us'?'class="active"':'') ?>><?php echo anchor('contact_us','Hubungi Kami') ?></li>
+                <li <?php echo ($this->uri->segment(2)=='sitemap'?'class="active"':'') ?>><?php echo anchor('page/sitemap','Peta Situs') ?></li>
             </ul>          
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
