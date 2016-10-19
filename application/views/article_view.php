@@ -26,10 +26,10 @@
 	                      	<?php if ($row->id != $article->id): ?>	                      		
 		                        <li class="media">
 		                          <div class="pull-left">
-		                            <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="150" height="90">
+		                            <img class="media-object" src="<?php echo $row->image ?>" alt="<?php echo $row->title ?>" width="140" height="96">
 		                          </div>
 		                          <div class="media-body">
-		                            <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
+		                            <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('page/article/'.$row->id,word_limiter($row->title,8)) ?></h5>
 		                            <p class="by-author">Penulis : <?php echo $row->author ?></p>
 		                          </div>
 		                        </li>                                

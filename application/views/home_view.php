@@ -110,9 +110,9 @@
                                 <?php if ($i==1): ?>
                                     <div class="col-md-12 col-lg-7">
                                         <div class="featured-article">
-                                            <img src="<?php echo $row->image ?>" alt="" class="thumb" width="482" height="350">
+                                            <img src="<?php echo $row->image ?>" alt="<?php echo $row->title ?>" class="thumb" width="482" height="350">
                                             <div class="block-title">
-                                                <h4><?php echo anchor('page/article/'.$row->id,$row->title) ?></h4>
+                                                <h4 title="<?php echo $row->title ?>"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h4>
                                                 <p class="by-author"><small>Penulis : <?php echo $row->author ?></small></p>
                                             </div>
                                         </div>
@@ -122,10 +122,10 @@
                                 <?php else: ?>
                                     <li class="media">
                                       <div class="pull-left">
-                                        <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="140" height="96">
+                                        <img class="media-object" src="<?php echo $row->image ?>" alt="<?php echo $row->title ?>" width="140" height="96">
                                       </div>
                                       <div class="media-body">
-                                        <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
+                                        <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('page/article/'.$row->id,word_limiter($row->title,8)) ?></h5>
                                         <p class="by-author">Penulis : <?php echo $row->author ?></p>
                                       </div>
                                     </li>                                    
@@ -147,12 +147,10 @@
                         <?php foreach ($article as $row): ?>
                         <div class="media media-list">
                             <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="140" height="96">
-                                </a>
+                                <?php echo anchor('page/article/'.$row->id,'<img class="media-object" src="'.$row->image.'" alt="'.$row->title.'" width="140" height="96">') ?>
                             </div>
                             <div class="media-body">
-                                <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
+                                <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('page/article/'.$row->id,word_limiter($row->title,8)) ?></h5>
                                 <p class="by-author">Penulis : <?php echo $row->author ?></p>
                             </div>
                         </div>
