@@ -112,7 +112,7 @@
                                         <div class="featured-article">
                                             <img src="<?php echo $row->image ?>" alt="" class="thumb" width="482" height="350">
                                             <div class="block-title">
-                                                <h2><?php echo anchor('page/article/'.$row->id,$row->title) ?></h2>
+                                                <h4><?php echo anchor('page/article/'.$row->id,$row->title) ?></h4>
                                                 <p class="by-author"><small>Penulis : <?php echo $row->author ?></small></p>
                                             </div>
                                         </div>
@@ -121,42 +121,42 @@
                                         <ul class="media-list main-list">                                    
                                 <?php else: ?>
                                     <li class="media">
-                                    <div class="pull-left">
-                                      <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="150" height="90">
-                                    </div>
-                                    <div class="media-body">
-                                      <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
-                                      <p class="by-author">Penulis : <?php echo $row->author ?></p>
-                                    </div>
+                                      <div class="pull-left">
+                                        <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="140" height="96">
+                                      </div>
+                                      <div class="media-body">
+                                        <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
+                                        <p class="by-author">Penulis : <?php echo $row->author ?></p>
+                                      </div>
                                     </li>                                    
                                 <?php endif ?>
                             <?php $i++;endforeach ?>
                                 </ul>
                             </div>
                         </div>            
+                    </div>
+                </div>            
+                <div class="panel panel-default">
+                    <div class="panel-body">
                         <div class="row row-heading">
                             <h3>
                                 BERITA TERKINI
                             </h3>
                             <p>Berita Seputar Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
                         </div>
-                        <div class="row">
-                          <div class="col-md-12">
-                            <ul class="media-list main-list">
-                              <?php foreach ($article as $row): ?>
-                                <li class="media">
-                                  <div class="pull-left">
-                                    <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="150" height="90">
-                                  </div>
-                                  <div class="media-body">
-                                    <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
-                                    <p class="by-author">Penulis : <?php echo $row->author ?></p>
-                                  </div>
-                                </li>                                
-                              <?php endforeach ?>
-                            </ul>
-                          </div>  
-                        </div>   
+                        <?php foreach ($article as $row): ?>
+                        <div class="media media-list">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="<?php echo $row->image ?>" alt="..." width="140" height="96">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h5>
+                                <p class="by-author">Penulis : <?php echo $row->author ?></p>
+                            </div>
+                        </div>
+                        <?php endforeach ?>
                     </div>
                     <div class="panel-footer">
                         <p class="text-center"><?php echo anchor('#','Lainnya',array('class'=>'btn btn-warning')) ?></p>
