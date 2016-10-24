@@ -45,7 +45,6 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
-              <li><?php echo anchor('contact_us','Hubungi Kami') ?></li>
               <li><?php echo anchor('page/sitemap','Peta Situs') ?></li>
             </ul>
           </div>
