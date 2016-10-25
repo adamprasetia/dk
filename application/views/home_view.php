@@ -66,7 +66,7 @@
           <div class="carousel-caption">
             <img src="<?php echo config_item('assets') ?>img/logo.png">
             <h1>Profil</h1>
-            <p>Dinas Pendidikan dan Pertamanan Kabupaten Cianjur</p>
+            <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
             <p><?php echo anchor('page/profil','Selengkapnya',array('class'=>'btn btn-lg btn-warning','role'=>'button')) ?></p>
           </div>
         </div>
