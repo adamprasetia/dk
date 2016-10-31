@@ -24,9 +24,7 @@
         </div>
         <?php foreach ($list as $row): ?>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="javascript:void(0)">
-                    <img class="img-responsive" src="<?php echo config_item('assets').'photo/'.thumb($row->filename) ?>" alt="<?php echo $row->title ?>">
-                </a>
+                <img src="<?php echo config_item('assets').'photo/'.thumb($row->filename) ?>" alt="<?php echo $row->title ?>" width="200px" height="150px">
                 <p><?php echo '<strong>Judul</strong> : '.$row->title ?></p>
                 <p><?php echo '<strong>Gallery</strong> : '.($row->is_gallery==1?'Ya':'Tidak') ?></p>
                 <p>
