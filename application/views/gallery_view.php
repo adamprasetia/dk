@@ -14,7 +14,7 @@
     </li>
     <?php endforeach ?>
 </ul>
-<div class="col-lg-12">
+<div class="pagination">
     <?php echo $pagination ?>
 </div>
 <script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
