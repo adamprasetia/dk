@@ -36,6 +36,7 @@
 					<li <?php echo ($this->uri->segment(1)=='users'?'class="active"':'') ?>><?php echo anchor('users','Users') ?></li>
 					<li <?php echo ($this->uri->segment(1)=='article'?'class="active"':'') ?>><?php echo anchor('article','Artikel') ?></li>
 					<li <?php echo ($this->uri->segment(1)=='photo'?'class="active"':'') ?>><?php echo anchor('photo','Foto') ?></li>
+					<li <?php echo ($this->uri->segment(1)=='page'?'class="active"':'') ?>><?php echo anchor('page','Page') ?></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">

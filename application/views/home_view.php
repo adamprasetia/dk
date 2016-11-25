@@ -37,15 +37,50 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><?php echo anchor('page/home','Home') ?></li>
-              <li><?php echo anchor('page/profil','Profil') ?></li>
-              <li><?php echo anchor('page/visimisi','Visi & Misi') ?></li>
-              <li><?php echo anchor('page/gallery','Galeri') ?></li>
-              <li><?php echo anchor('page/banksampah','Bank Sampah') ?></li>
+                <li class="active"><?php echo anchor('home','Beranda') ?></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><?php echo anchor('page/sekilas','Sekilas') ?></li>
+                        <li><?php echo anchor('page/visimisi','Visi Misi') ?></li>
+                        <li><?php echo anchor('page/tugas_pokok_dan_fungsi','Tugas Pokok dan Fungsi') ?></li>
+                        <li><?php echo anchor('page/struktur_organisasi','Struktur Organisasi') ?></li>
+                        <li><?php echo anchor('page/program_kegiatan','Program & Kegiatan') ?></li>
+                        <li><?php echo anchor('page/program_kegiatan','Jenis Pelayanan Publik') ?></li>
+                        <li><?php echo anchor('page/prestasi','Prestasi') ?></li>
+                        <li><?php echo anchor('page/sambutan','Sambutan') ?></li>
+                        <li><?php echo anchor('page/kontak','Kontak') ?></li>
+                    </ul>
+                </li>              
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pelayanan <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><?php echo anchor('page/jenis_pelayanan','Jenis Pelayanan') ?></li>
+                        <li><?php echo anchor('page/prosedure_pelayanan','Prosedure Pelayanan') ?></li>
+                    </ul>
+                </li>              
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Laporan <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><?php echo anchor('page/lakip','LAKIP') ?></li>
+                        <li><?php echo anchor('page/tapkin','TAPKIN') ?></li>
+                        <li><?php echo anchor('page/renstra','RENSTRA') ?></li>
+                    </ul>
+                </li>              
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lainnya <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><?php echo anchor('pengaduan','Pengaduan') ?></li>
+                        <li><?php echo anchor('page/pengumuman','Pengumuman') ?></li>
+                        <li><?php echo anchor('unduh','Unduh Surat') ?></li>
+                        <li><?php echo anchor('article','Berita') ?></li>
+                        <li><?php echo anchor('gallery','Galeri') ?></li>
+                    </ul>
+                </li>              
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
-              <li><?php echo anchor('page/sitemap','Peta Situs') ?></li>
+              <li><?php echo anchor('sitemap','Peta Situs') ?></li>
             </ul>
           </div>
         </div>
@@ -111,7 +146,7 @@
                                         <div class="featured-article">
                                             <img src="<?php echo $row->image ?>" alt="<?php echo $row->title ?>" class="thumb" width="482" height="350">
                                             <div class="block-title">
-                                                <h4 title="<?php echo $row->title ?>"><?php echo anchor('page/article/'.$row->id,$row->title) ?></h4>
+                                                <h4 title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,$row->title) ?></h4>
                                                 <p class="by-author"><small>Penulis : <?php echo $row->author ?></small></p>
                                             </div>
                                         </div>
@@ -124,7 +159,7 @@
                                         <img class="media-object" src="<?php echo $row->image ?>" alt="<?php echo $row->title ?>" width="140" height="96">
                                       </div>
                                       <div class="media-body">
-                                        <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('page/article/'.$row->id,word_limiter($row->title,8)) ?></h5>
+                                        <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,word_limiter($row->title,8)) ?></h5>
                                         <p class="by-author">Penulis : <?php echo $row->author ?></p>
                                       </div>
                                     </li>                                    
@@ -146,17 +181,17 @@
                         <?php foreach ($article as $row): ?>
                         <div class="media media-list">
                             <div class="media-left">
-                                <?php echo anchor('page/article/'.$row->id,'<img class="media-object" src="'.$row->image.'" alt="'.$row->title.'" width="140" height="96">') ?>
+                                <?php echo anchor('article/read/'.$row->id,'<img class="media-object" src="'.$row->image.'" alt="'.$row->title.'" width="140" height="96">') ?>
                             </div>
                             <div class="media-body">
-                                <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('page/article/'.$row->id,word_limiter($row->title,8)) ?></h5>
+                                <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,word_limiter($row->title,8)) ?></h5>
                                 <p class="by-author">Penulis : <?php echo $row->author ?></p>
                             </div>
                         </div>
                         <?php endforeach ?>
                     </div>
                     <div class="panel-footer">
-                        <p class="text-center"><?php echo anchor('#','Lainnya',array('class'=>'btn btn-warning')) ?></p>
+                        <p class="text-center"><?php echo anchor('article','Lainnya',array('class'=>'btn btn-warning')) ?></p>
                     </div>    
                 </div>
             </div>    
@@ -180,7 +215,7 @@
                         </ul>                                        
                     </div>
                     <div class="panel-footer">
-                        <p class="text-center"><?php echo anchor('page/gallery','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>                        
+                        <p class="text-center"><?php echo anchor('gallery','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>                        
                     </div>
                 </div>
             </div>
@@ -191,13 +226,13 @@
         <div class="footer-left">        
             <h3 class="hidden-xs">Dinas<span>Kebersihan</span>dan<span>Pertamanan</span></h3>
             <p class="footer-links">
-                <?php echo anchor('page/home','Home') ?>
+                <?php echo anchor('home','Home') ?>
                 ·
                 <?php echo anchor('page/profil','Profil') ?>
                 ·
                 <?php echo anchor('page/visimisi','Visi & Misi') ?>
                 ·
-                <?php echo anchor('page/gallery','Galeri') ?>
+                <?php echo anchor('gallery','Galeri') ?>
             </p>
             <p class="footer-company-name">Dinas Kebersihan dan Pertamanan Kabupaten Cianjur &copy; 2016</p>
         </div>
