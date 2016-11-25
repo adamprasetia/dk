@@ -102,7 +102,7 @@
             <img src="<?php echo config_item('assets') ?>img/logo.png">
             <h1>Profil</h1>
             <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
-            <p><?php echo anchor('page/profil','Selengkapnya',array('class'=>'btn btn-lg btn-warning','role'=>'button')) ?></p>
+            <p><?php echo anchor('page/sekilas','Selengkapnya',array('class'=>'btn btn-lg btn-warning','role'=>'button')) ?></p>
           </div>
         </div>
       </div>
