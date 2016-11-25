@@ -6,6 +6,6 @@
 	    <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
 	</div>
 	<div class="panel-footer">
-		<p>Kembali ke <?php echo anchor('page/home','Beranda') ?></p>
+		<p>Kembali ke <?php echo anchor('home','Beranda') ?></p>
 	</div>
 </div>
