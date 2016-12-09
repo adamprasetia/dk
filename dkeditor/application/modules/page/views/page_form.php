@@ -1,5 +1,11 @@
-<!-- include summernote css/js-->
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>
+	tinymce.init({
+		selector:'textarea',
+		plugins:'advlist autolink link image lists charmap print preview',
+		height : 500
+	});
+</script>
 <section class="content-header">
 	<h1>
 		<?php echo $title ?>
@@ -45,11 +51,3 @@
 	</div>
 	<?php echo form_close()?>
 </section>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-  		$('#content').summernote({
-  			height: 300
-  		});
-	});
-</script>
