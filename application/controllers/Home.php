@@ -10,6 +10,7 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
+		die("Website under maintenance");
 		$data = $this->get_data();
 		$this->load->view('home_view',$data);
 	}
