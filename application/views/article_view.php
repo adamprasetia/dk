@@ -15,7 +15,6 @@
                     </div>
                     <div class="media-body">
                         <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,word_limiter($row->title,8)) ?></h5>
-                        <p class="by-author">Penulis : <?php echo $row->author ?></p>
                     </div>
                 </div>
                 <?php endforeach ?>
