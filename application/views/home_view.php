@@ -10,7 +10,7 @@
     <title><?php echo APP_NAME ?></title>
     <link rel="shortcut icon" href="http://www.cianjurkab.go.id/images/cjr_icon.png" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>plugin/bootstrap-3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/carousel.css?v=2">
     <link rel="stylesheet" type="text/css" href="<?php echo config_item('assets') ?>css/headline.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
@@ -48,27 +48,33 @@
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <img class="first-slide" src="<?php echo config_item('assets') ?>img/b1.jpg" alt="First slide">
         <div class="container">
           <div class="carousel-caption">
-            <img src="<?php echo config_item('assets') ?>img/logo.png">
-            <h1>Profil</h1>
+            <img src="<?php echo config_item('assets') ?>img/logo.png" width="100">
             <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
-            <p><?php echo anchor('page/sekilas','Selengkapnya',array('class'=>'btn btn-lg btn-warning','role'=>'button')) ?></p>
           </div>
         </div>
       </div>
       <div class="item">
-        <img class="second-slide" src="<?php echo config_item('assets') ?>img/b3.jpg" alt="Second slide">
+        <img class="second-slide" src="<?php echo config_item('assets') ?>img/kendaraan/2.jpg" alt="Second slide">
         <div class="container">
           <div class="carousel-caption">
-            <img src="<?php echo config_item('assets') ?>img/logo.png">
-            <h1>Visi</h1>
+            <img src="<?php echo config_item('assets') ?>img/logo.png" width="100">
             <p>"Cianjur Lebih Maju dan Agamis"</p>
-            <p><?php echo anchor('page/visimisi','Selengkapnya',array('class'=>'btn btn-lg btn-warning','role'=>'button')) ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="second-slide" src="<?php echo config_item('assets') ?>img/prestasi/1.jpg" alt="Third slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="<?php echo config_item('assets') ?>img/logo.png" width="100">
+            <p>"Kota Bersih dan Teduh"</p>
           </div>
         </div>
       </div>
@@ -85,54 +91,76 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-4">
                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        GAMBARAN UMUM
+                    </div>                
                     <div class="panel-body">
-                        <div class="row row-heading">
-                            <h3>
-                                HEADLINE
-                            </h3>
-                            <p>Berita Pilihan Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
-                        </div>
-                        <div class="row">
-                            <?php $i=1;foreach ($article_headline as $row): ?>
-                                <?php if ($i==1): ?>
-                                    <div class="col-md-12 col-lg-7">
-                                        <div class="featured-article">
-                                            <img src="<?php echo $row->image ?>" alt="<?php echo $row->title ?>" class="thumb" width="482" height="350">
-                                            <div class="block-title">
-                                                <h4 title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,$row->title) ?></h4>
-                                                <p class="by-author"><small>Penulis : <?php echo $row->author ?></small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-5">
-                                        <ul class="media-list main-list">                                    
-                                <?php else: ?>
-                                    <li class="media">
-                                      <div class="pull-left">
-                                        <img class="media-object" src="<?php echo $row->image ?>" alt="<?php echo $row->title ?>" width="140" height="96">
-                                      </div>
-                                      <div class="media-body">
-                                        <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,word_limiter($row->title,8)) ?></h5>
-                                        <p class="by-author">Penulis : <?php echo $row->author ?></p>
-                                      </div>
-                                    </li>                                    
-                                <?php endif ?>
-                            <?php $i++;endforeach ?>
-                                </ul>
-                            </div>
-                        </div>            
+                        <p>Dinas Kebersihan dan Pertamanan merupakan urusan pelaksana otonom daerah di bidang kebersihan dan pertamanan, dipimpin oleh seorang Kepala Dinas yang berada di bawah dan bertanggungjawab kepada Bupati melalui Sekretaris Daerah yang di bentuk dari perda kabupaten cianjur No 02 tahun2010.</p>                    
+                        <img src="<?php echo config_item('assets')?>img/office/3.jpg" class="img-thumbnail img-responsive center-block">
                     </div>
-                </div>            
+                </div>
                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        PENGUMUMAN
+                    </div>                
                     <div class="panel-body">
-                        <div class="row row-heading">
-                            <h3>
-                                BERITA TERKINI
-                            </h3>
-                            <p>Berita Seputar Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
-                        </div>
+                        <ol>
+                            <li>Kegiatan rutin jumat bersih harus dilaksanakan oleh seluruh warga cianjur </li>
+                            <li>Pelaksanaan kegiatan Persiapan Adipura Tahap I untuk penilaian adipura tahun 2017</li>                    
+                        </ol>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        LAPORAN
+                    </div>                
+                    <div class="panel-body">
+                        <ul>
+                            <li><?php echo anchor(config_item('assets').'pdf/lakip.pdf','LAKIP') ?></li>
+                            <li><?php echo anchor(config_item('assets').'pdf/renja.pdf','RENJA') ?></li>
+                            <li><?php echo anchor(config_item('assets').'pdf/renstra.pdf','RENSTRA') ?></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        JENIS PELAYANAN
+                    </div>                
+                    <div class="panel-body">
+                        <ul>
+                            <li>Pelayanan Pengangkutan Sampah</li>
+                            <li>Pelayanan Sedot Tinja/Kakus</li>
+                            <li>Pelayanan Pemakaman</li>
+                            <li>Pelayanan Pembungan Sampah di TPA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        BUKU TAMU
+                    </div>                
+                    <div class="panel-body">
+                        <?php foreach ($buku_tamu as $row): ?>
+                            <p><label class="control-label">Nama Lengkap</label> : <?php echo $row->name ?></p>
+                            <p><label class="control-label">Email</label> : <?php echo $row->email ?></p>
+                            <p><label class="control-label">Alamat</label> : <?php echo $row->address ?></p>
+                            <p><label class="control-label">Pesan</label> : <?php echo $row->message ?></p>
+                            <hr>
+                        <?php endforeach ?>
+                    </div>
+                    <div class="panel-footer">
+                        <p class="text-center"><?php echo anchor('buku_tamu','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>
+                    </div>    
+                </div>                
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        BERITA
+                    </div>                
+                    <div class="panel-body">
                         <?php foreach ($article as $row): ?>
                         <div class="media media-list">
                             <div class="media-left">
@@ -140,7 +168,6 @@
                             </div>
                             <div class="media-body">
                                 <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,word_limiter($row->title,8)) ?></h5>
-                                <p class="by-author">Penulis : <?php echo $row->author ?></p>
                             </div>
                         </div>
                         <?php endforeach ?>
@@ -149,17 +176,23 @@
                         <p class="text-center"><?php echo anchor('article','Lainnya',array('class'=>'btn btn-warning')) ?></p>
                     </div>    
                 </div>
-            </div>    
-            <div class="col-md-3">
                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        PRESTASI
+                    </div>                
                     <div class="panel-body">
-                        <div class="row row-heading">
-                            <h3>
-                                GALERI
-                            </h3>
-                            <p>Dokumentasi Foto/Gambar</p>
-                        </div>
-
+                        <ul class="first"><li><img alt='Prestasi yang pernah di raih oleh Dinas Kebersihan dan Peratmanan Kabupaten Cianjur yaitu Program ADIPURA yang diraih beberapa tahun yang di selenggarakan oleh Kementrian Lingkungan hidup yang bertujuan untuk program Adipura difokuskan untuk mendorong kota-kota di Indonesia menjadi "Kota Bersih dan Teduh".' src="<?php echo config_item('assets')?>img/prestasi/1.jpg" class="img-thumbnail img-responsive center-block"></li></ul>
+                        <ul class="first"><li><img alt='Prestasi yang pernah di raih oleh Dinas Kebersihan dan Peratmanan Kabupaten Cianjur yaitu Program ADIPURA yang diraih beberapa tahun yang di selenggarakan oleh Kementrian Lingkungan hidup yang bertujuan untuk program Adipura difokuskan untuk mendorong kota-kota di Indonesia menjadi "Kota Bersih dan Teduh".' src="<?php echo config_item('assets')?>img/prestasi/2.jpg" class="img-thumbnail img-responsive center-block"></li></ul>
+                        <ul class="first"><li><img alt='Prestasi yang pernah di raih oleh Dinas Kebersihan dan Peratmanan Kabupaten Cianjur yaitu Program ADIPURA yang diraih beberapa tahun yang di selenggarakan oleh Kementrian Lingkungan hidup yang bertujuan untuk program Adipura difokuskan untuk mendorong kota-kota di Indonesia menjadi "Kota Bersih dan Teduh".' src="<?php echo config_item('assets')?>img/prestasi/3.jpg" class="img-thumbnail img-responsive center-block"></li></ul>
+                    </div>
+                </div>
+            </div>    
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        GALERI
+                    </div>                
+                    <div class="panel-body">
                         <ul class="row first">
                             <?php $i=1;foreach ($list as $row): ?>
                             <li>
@@ -173,6 +206,39 @@
                         <p class="text-center"><?php echo anchor('gallery','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>                        
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        UNDUHAN SURAT
+                    </div>                
+                    <div class="panel-body">
+                        <ul>
+                            <li><?php echo anchor(config_item('assets').'pdf/Perda_retribusi-07-2012.pdf','Perda retribusi tentang pelayanan pada Dinas Kebersihan dan Pertamanan Perda no 7 tahun 2012') ?></li>
+                            <li><?php echo anchor(config_item('assets').'pdf/perda_pembetukan_no_02_th_2010.pdf','Perda pembentukan Dinas Kebersihan dan Pertamanan no 02 th 2010') ?></li>
+                            <li><?php echo anchor(config_item('assets').'pdf/peraturan_bupati_no_49_tahun_2010.pdf','Perbub tentang tupoksi no 49 tahun 2010') ?></li>
+                        </ul>
+                    </div>
+                </div>                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        PETA LAYANAN KEBERSIHAN
+                    </div>                
+                    <div class="panel-body">
+                        <p><strong>Pelayanan Angkutan Sampah</strong></p>
+                        <ul class="first"><li><img alt="Pelayanan Angkutan Sampah" class="img-thumbnail img-responsive center-block" src="<?php echo config_item('assets') ?>img/peta.jpg"></li></ul>
+                        <p><strong>Pelayanan TPA (TPA PASIR SEMBUNG)</strong></p>
+                        <ul class="first"><li><img alt="Pelayanan TPA (TPA PASIR SEMBUNG)" class="img-thumbnail img-responsive center-block" src="<?php echo config_item('assets') ?>img/tpa.jpg"></li></ul>
+                    </div>
+                </div>                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        KONTAK
+                    </div>                
+                    <div class="panel-body">
+                        <p>Dikelola dan Dipublikasikan oleh Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
+                        <p>Email : Kebersihan.Cianjur@gmail.com</p>
+                        <p>Tlp. (0263) 265110</p>                    
+                    </div>
+                </div>                
             </div>
         </div>    
     </div>
@@ -224,7 +290,7 @@
     <script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-photo-gallery/jquery.bsPhotoGallery.js"></script>
     <script>
         $(document).ready(function(){
-            $('ul.first').bsPhotoGallery({
+            $('.first').bsPhotoGallery({
               "classes" : "col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12",
               "hasModal" : true
             });

@@ -48,6 +48,8 @@ class Home extends CI_Controller {
 		}
 		$data['article'] = $article;
 
+		$buku_tamu = $this->home_model->get_buku_tamu();
+		$data['buku_tamu'] = $buku_tamu;
 		return $data;
 	}
 }

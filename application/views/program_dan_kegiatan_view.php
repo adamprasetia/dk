@@ -9,6 +9,32 @@
                     <p>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
                 </div>
                 <div>
+                    <p><strong>Program Pengembangan KInerja Pengelolaan Persampahan</strong></p>
+                    <ul>
+                        <li>penyediaan Prasarana dan Sarana Pengelolaan Persampahan</li>
+
+                        <li>Peningkatan Operasi dan Pemeliharaan Prasarana dan Sarana Persampahan</li>
+
+                        <li>Sosialisasi Kebijakan Pengelolaan Persampahan</li>
+
+                        <li>Peningkatan Peran serta masyarakat Dalam Pengelolaan Persampahan</li>
+
+                        <li>Peningkatan Pengelolaan Sampah Menjadi Kompos</li>
+
+                        <li>Peningkatan Operasi dan Pemeliharaan TPA</li>
+                    </ul>
+
+                    <p><strong>Program Pengelolaan Areal Pemakaman</strong></p>
+
+                    <ul>
+                        <li>Pengelolaan Areal Pemakaman</li>
+                    </ul>
+
+                    <p><strong>Program Pengelolaan Ruang Terbuka Hijau (RTH)</strong></p>
+                    <ul>
+                        <li>Penataan RTH</li>
+                        <li>Pemeliharaan RTH</li>
+                    </ul>
                 </div>
             </div>
         </div>    

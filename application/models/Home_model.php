@@ -40,4 +40,11 @@ class Home_model extends CI_Model
 		$this->db->limit(10);
 		return $this->db->get()->result();
 	}
+	function get_buku_tamu()
+	{
+		$this->db->from('buku_tamu a');
+		$this->db->order_by('a.date_create','desc');
+		$this->db->limit(3);
+		return $this->db->get()->result();		
+	}
 }

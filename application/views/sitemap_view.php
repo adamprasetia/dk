@@ -47,9 +47,9 @@
                 </ul>
             </li>              
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li <?php echo ($this->uri->segment(1)=='buku_tamu'?'class="active"':'') ?>><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
-            <li <?php echo ($this->uri->segment(2)=='sitemap'?'class="active"':'') ?>><?php echo anchor('sitemap','Peta Situs') ?></li>
+        <ul>
+            <li><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
+            <li><?php echo anchor('sitemap','Peta Situs') ?></li>
         </ul>          
 	</div>
 </div>
