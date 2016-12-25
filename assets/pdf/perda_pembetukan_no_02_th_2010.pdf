@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+<meta name="verify-v1" content="KxYiX7etM9VlJsbOOoFNZRdf7BeQqDyMgKMJmSHQ/ck=" />
+<meta name="description" content="arsip berita daerah pemerintah kabupaten cianjur" />
+<meta name="keywords" content="kabupaten cianjur, berita, daerah, cinderamata, pariwisata, layanan publik, profil cianjur, perijinan, e-books, investasi, perda, peraturan daerah, legislatif, dprd, manisan, ayam pelung, gunung gede, cibodas, istana presiden, puncak, taman bunga, tauco, ayam pelung, beras, pandanwangi, pencak silat, cianjuran, dinas, kantor, badan" />
+<meta name="robots" content="index,follow" />
+<title>Situs Resmi Kabupaten Cianjur | Arsip Berita Daerah</title>
+<link rel="shortcut icon" href="http://www.cianjurkab.go.id/images/cjr_icon.png" type="image/x-icon"/>
+<link type="text/css" href="http://www.cianjurkab.go.id/css/reset.css" rel="stylesheet" />
+<link type="text/css" href="http://www.cianjurkab.go.id/css/details.css" rel="stylesheet" />
+<script type="text/javascript" src="http://www.cianjurkab.go.id/js/jquery.min.js"></script> 
+<script type="text/javascript" src="http://www.cianjurkab.go.id/js/dropdown.js" ></script>
+</head>
+
+<body id="wtbd" class="wt">
+    <script type="text/javascript" src="http://www.cianjurkab.go.id/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<script type="text/javascript">
+function SelectAll(id)
+{
+    document.getElementById(id).focus();
+    document.getElementById(id).select();
+}
+</script>
+<div style="width:900px; margin:0 auto;">
+	<div class="clearfix">
+    	<div class="photobpt right" style="z-index:5;">
+            <div class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+					  
+						<img src="http://www.cianjurkab.go.id/images/gambaratas/masjid agung.jpg"  /> 
+					   
+						<img src="http://www.cianjurkab.go.id/images/gambaratas/istana-cipanas2.jpg"  /> 
+					                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="top-header">
+    <div class="main">
+        <div class="clearfix">
+        	            <div style="width:200px; padding:4px 7px 2px; color:#fff;float:left;">Minggu, 25 Desember 2016</div>
+            <div class="toph-menu right">
+                <ul class="menu-nav-toph">
+                    <li><a href="http://www.cianjurkab.go.id/Buku_Tamu">buku tamu</a>|</li>
+                    <li><a href="http://www.cianjurkab.go.id/Kontak">kontak kami</a>|</li>
+                    <li><a href="http://www.cianjurkab.go.id/Peta_Situs">peta situs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--EHeader-->
+<!--SLogoHeader-->
+<div id="bt-header">
+    <div class="main">
+        <div class="clearfix">
+            <div class="logo"></div>            
+        </div>
+    </div>
+</div>
+<!--ELogoHeader-->
+<!--SNavHeader-->
+<div id="nav-header">
+    <div class="main">
+        <div class="menu_content1">
+            <ul id="pgmenu">
+                <li><a href="http://www.cianjurkab.go.id/index.php" title="Home" class="current">Home</a></li>
+<li><a href="http://www.cianjurkab.go.id/Content_Nomor_Menu_17_3.html" title="Profil Cianjur">Profil Cianjur</a></li>
+<li><a href="http://www.cianjurkab.go.id/Content_Nomor_Menu_43_5.html" title="Pemerintahan">Pemerintahan </a></li>
+<li><a href="http://www.cianjurkab.go.id/Content_Nomor_Menu_54_6.html" title="Pariwisata">Pariwisata </a></li>
+<li><a href="http://www.cianjurkab.go.id/Content_Nomor_Menu_26_4.html" title="Khas Cianjur">Khas Cianjur</a></li>
+<li><a href="http://www.cianjurkab.go.id/dprd" title="Profil Anggota DPRD">DPRD</a></li>
+<li><a href="#">Galeri</a>
+    <ul style="z-index:10;">
+        <li><a href="http://www.cianjurkab.go.id/Galleri">Galeri Foto</a></li>
+        <li><a href="http://www.cianjurkab.go.id/TempoDoloe">Tjiandjur Tempo Doloe</a></li>
+    </ul>
+</li>
+<li><a href="http://www.cianjurkab.go.id/Peraturan_Daerah" title="Peraturan Daerah">Perda</a></li>
+<!-- update menu kepegawaian by radhitya nugraha putra -->
+<!--<li><a href="http://www.cianjurkab.go.id/kepegawaian" title="Kepegawaian">Kepegawaian</a></li> -->
+            </ul>
+            <div class="search_body1">
+                <form action="http://www.google.com/custom" target="_top" method="get" id="search_box">
+                            <div class="wrapper">
+                            	<input type="hidden" name="domains" value="cianjurkab.go.id" /> 
+                                <input type="text" id="q" name="q" onClick="SelectAll('q');" value = "  Pencarian Google  " >
+                                <button type="submit" class="search_btn" name="sa" ><img src="images/search.png"/></button>                                <input type="hidden" name="sitesearch" value="cianjurkab.go.id" checked="checked" /> 
+                                <input type="hidden" name="client" value="pub-6880533263535234" />
+                                <input type="hidden" name="forid" value="1" />
+                                <input type="hidden" name="ie" value="ISO-8859-1" />
+                                <input type="hidden" name="oe" value="ISO-8859-1" />
+                                <input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;" />
+                                <input type="hidden" name="hl" value="en" /> 
+                            </div>
+                        </form>        
+            </div>
+        </div>           
+    </div>
+</div> 
+        <!--ENavHeader-->
+        
+        <!--SContainer-->
+<div id="container2">
+            <div class="main clearfix">
+                <!--SContainerLeft-->
+                <div class="condetail-100">
+                	<div class="con100-body">
+                        <h1>Peraturan Daerah &raquo;</h1>
+                        <div style="padding-top:15px;" class="hline">
+                            Untuk melihat isi PERDA, Klik pada icon <img src='http://www.cianjurkab.go.id/images/button_pdf.png' border='0'> untuk di unduh (Save File) ke komputer Anda, Kemudian buka dengan aplikasi yang dapat membuka file PDF. 
+                            <br>Silahkan Klik icon dibawah ini jika aplikasi belum terinstall di komputer Anda.<br>
+                            <a href="http://get.adobe.com/reader/" target="blank" title="Download Adobe Reader"><img src="http://www.cianjurkab.go.id/images/icon_get_adobe.gif" ></a>
+                        </div>
+                        <div class="perda">
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th width="35">NO</th>
+                                        <th width="150">NO dan Tahun Perda</th>
+                                        <th width="120">Tanggal Perda</th>
+                                        <th>Tentang</th>
+                                        <th width="40">File</th>
+                                    </tr> 
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">1</td>
+                                        <td>No. 01 Tahun 2013</td>
+                                        <td>13 Mei 2013</td>
+                                        <td>Pengendalian  Menara Telekomunikasi  Di Kabupaten  Cianjur</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/367.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">2</td>
+                                        <td>No. 02 Tahun 2013</td>
+                                        <td>13 Mei 2013</td>
+                                        <td>Perubahan  Atas  Peraturan  Daerah  Kabupaten  Cianjur  Nomor 03  Tahun 2011 Tentang Retribusi Pelayanan  Kesehatan </td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/368.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">3</td>
+                                        <td>No. 03 Tahun 2013</td>
+                                        <td>13 Mei 2013</td>
+                                        <td>Retribusi  Penjualan  Produksi  Usaha Daerah</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/369.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">4</td>
+                                        <td>No. 04 Tahun 2013</td>
+                                        <td>1 Juli 2013</td>
+                                        <td>Tata Cara Pembentukan Produk Hukum Daerah</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/370.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">5</td>
+                                        <td>No. 05 Tahun 2013</td>
+                                        <td>1 Juli 2013</td>
+                                        <td>Penyertaan Modal Daerah Kepada Perusahaan Daerah Perkreditan Kecamatan Kabupaten Cianjur</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/371.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">6</td>
+                                        <td>No. 06 Tahun 2013</td>
+                                        <td>1 Juli 2013</td>
+                                        <td>Pelayanan  Publik</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/372.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">7</td>
+                                        <td>No. 07 Tahun 2013</td>
+                                        <td>1 Juli 2013</td>
+                                        <td>Penyelenggaraan Dan Penanganan Kesejahteraan Sosial</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/373.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">8</td>
+                                        <td>No. 08 Tahun 2013</td>
+                                        <td>1 Juli 2013</td>
+                                        <td>Investasi  Di Kabupaten  Cianjur</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/374.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">9</td>
+                                        <td>No. 09 Tahun 2013</td>
+                                        <td>22 Juli  2013</td>
+                                        <td>Perubahan Ketiga Atas Peraturan Daerah Kabupaten  Cianjur Nomor  07 Tahun 2008  Tentang  Organisasi  Pemerintahan  Daerah Dan Pembentukan  Organisasi  Perangkat  Daerah Kabupaten  Cianjur</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/375.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">10</td>
+                                        <td>No. 10 Tahun 2013</td>
+                                        <td>16 Agustus 2013</td>
+                                        <td>Pertanggungjawaban  Pelaksanaan  Anggaran  Pendapatan Dan  Belanja  Daerah Kabupaten  Cianjur Tahun  Anggaran  2012</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/376.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">11</td>
+                                        <td>No. 14 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Izin Mendirikan Bangunan</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/354.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">12</td>
+                                        <td>No. 15 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Izin Gangguan</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/355.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">13</td>
+                                        <td>No. 13 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Rumah Potong Hewan</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/353.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">14</td>
+                                        <td>No. 11 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Pemeriksaan Alat Pemadam Kebakaran</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/351.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">15</td>
+                                        <td>No. 12 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Pemakaian Kekayaan Daerah</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/352.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">16</td>
+                                        <td>No. 10 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Pelayanan Pasar</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/350.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">17</td>
+                                        <td>No. 09 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Pelayanan Parkir Di Tepi Jalan Umum, Retribusi PKB, Retribusi Terminal, Retribusi Tempat Khusus Parkir Dan Retribusi Izin Trayek</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/349.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">18</td>
+                                        <td>No. 08 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Penggantian Biaya Cetak Kartu Tanda Penduduk Dan Akta Catatan Sipil</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/348.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">19</td>
+                                        <td>No. 07 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Retribusi Pelayanan Persampahan/Kebersihan, Pelayanan Penyediaan Dan/Atau Penyedotan Kakus Dan Retribusi Pemakaman Dan Pengabuan Mayat</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/347.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right; padding-right:5px;">20</td>
+                                        <td>No. 06 Tahun 2012</td>
+                                        <td>01 Juni 2012</td>
+                                        <td>Pajak Bumi Dan Bangunan Perdesaan Dan Perkotaan</td>
+                                                                                <td><a title="Download file..." href="http://www.cianjurkab.go.id/Peraturan_Daerah/download/346.html"><img src="http://www.cianjurkab.go.id/images/button_pdf.png" border="0"></a></td>
+                                                                        </tr>
+                                </tbody>                           
+                                                          </table>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="pagingwrp">
+                            <div id="results_resultsNavigationDiv" class="paginationEMP">                                                  
+                                <span class='current'>1</font></span>												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-2.html"">2</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-3.html"">3</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-4.html"">4</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-5.html"">5</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-6.html"">6</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-7.html"">7</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-8.html"">8</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-9.html"">9</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-10.html"">10</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-11.html"">11</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-12.html"">12</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-13.html"">13</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-14.html"">14</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-15.html"">15</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-16.html"">16</a></span>  
+										  												<span><a href="http://www.cianjurkab.go.id/Peraturan_Daerah-halaman-17.html"">17</a></span>  
+										                                                              
+                            </div>
+                        </div>
+                        
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!--EContainerLeft-->
+            </div>
+                
+      </div>
+        <div class="clear"></div>
+        <!--EContainer-->
+
+        <!--SFooter-->
+        <div id="footer">
+        	<div class="main">
+                <div class="footer-100"></div>
+            	<div class="footer-text">
+                	<div class="footer-copy">&copy; Hak Cipta Pemkab Cianjur 2005 - 2016 | Dikelola Oleh Dinas Perhubungan, Komunikasi dan Informatika Kab. Cianjur |  e-mail:dishubkominfo@cianjurkab.go.id</div>                </div>
+            </div>
+      </div>
+        <!--EFooter-->
+    </div>
+</body>
+</html>

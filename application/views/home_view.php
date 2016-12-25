@@ -36,52 +36,7 @@
               <p class="navbar-text hidden-lg hidden-md hidden-sm">Dinas Kebersihan dan Pertamanan Cianjur</p>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><?php echo anchor('home','Beranda') ?></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><?php echo anchor('page/sekilas','Sekilas') ?></li>
-                        <li><?php echo anchor('page/visimisi','Visi Misi') ?></li>
-                        <li><?php echo anchor('page/tugas_pokok_dan_fungsi','Tugas Pokok dan Fungsi') ?></li>
-                        <li><?php echo anchor('page/struktur_organisasi','Struktur Organisasi') ?></li>
-                        <li><?php echo anchor('page/program_kegiatan','Program & Kegiatan') ?></li>
-                        <li><?php echo anchor('page/program_kegiatan','Jenis Pelayanan Publik') ?></li>
-                        <li><?php echo anchor('page/prestasi','Prestasi') ?></li>
-                        <li><?php echo anchor('page/sambutan','Sambutan') ?></li>
-                        <li><?php echo anchor('page/kontak','Kontak') ?></li>
-                    </ul>
-                </li>              
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pelayanan <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><?php echo anchor('page/jenis_pelayanan','Jenis Pelayanan') ?></li>
-                        <li><?php echo anchor('page/prosedure_pelayanan','Prosedure Pelayanan') ?></li>
-                    </ul>
-                </li>              
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Laporan <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><?php echo anchor('page/lakip','LAKIP') ?></li>
-                        <li><?php echo anchor('page/tapkin','TAPKIN') ?></li>
-                        <li><?php echo anchor('page/renstra','RENSTRA') ?></li>
-                    </ul>
-                </li>              
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lainnya <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><?php echo anchor('pengaduan','Pengaduan') ?></li>
-                        <li><?php echo anchor('page/pengumuman','Pengumuman') ?></li>
-                        <li><?php echo anchor('unduh','Unduh Surat') ?></li>
-                        <li><?php echo anchor('article','Berita') ?></li>
-                        <li><?php echo anchor('gallery','Galeri') ?></li>
-                    </ul>
-                </li>              
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
-              <li><?php echo anchor('sitemap','Peta Situs') ?></li>
-            </ul>
+            <?php $this->load->view('menu_view'); ?>
           </div>
         </div>
       </nav>

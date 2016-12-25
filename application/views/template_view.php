@@ -37,52 +37,7 @@
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li <?php echo ($this->uri->segment(2)=='home'?'class="active"':'') ?>><?php echo anchor('home','Beranda') ?></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><?php echo anchor('page/sekilas','Sekilas') ?></li>
-                        <li><?php echo anchor('page/visimisi','Visi Misi') ?></li>
-                        <li><?php echo anchor('page/tugas_pokok_dan_fungsi','Tugas Pokok dan Fungsi') ?></li>
-                        <li><?php echo anchor('page/struktur_organisasi','Struktur Organisasi') ?></li>
-                        <li><?php echo anchor('page/program_kegiatan','Program & Kegiatan') ?></li>
-                        <li><?php echo anchor('page/program_kegiatan','Jenis Pelayanan Publik') ?></li>
-                        <li><?php echo anchor('page/prestasi','Prestasi') ?></li>
-                        <li><?php echo anchor('page/sambutan','Sambutan') ?></li>
-                        <li><?php echo anchor('page/kontak','Kontak') ?></li>
-                    </ul>
-                </li>              
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pelayanan <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><?php echo anchor('page/jenis_pelayanan','Jenis Pelayanan') ?></li>
-                        <li><?php echo anchor('page/prosedure_pelayanan','Prosedure Pelayanan') ?></li>
-                    </ul>
-                </li>              
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Laporan <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><?php echo anchor('page/lakip','LAKIP') ?></li>
-                        <li><?php echo anchor('page/tapkin','TAPKIN') ?></li>
-                        <li><?php echo anchor('page/renstra','RENSTRA') ?></li>
-                    </ul>
-                </li>              
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lainnya <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><?php echo anchor('pengaduan','Pengaduan') ?></li>
-                        <li><?php echo anchor('page/pengumuman','Pengumuman') ?></li>
-                        <li><?php echo anchor('unduh','Unduh Surat') ?></li>
-                        <li><?php echo anchor('article','Berita') ?></li>
-                        <li><?php echo anchor('gallery','Galeri') ?></li>
-                    </ul>
-                </li>              
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li <?php echo ($this->uri->segment(1)=='buku_tamu'?'class="active"':'') ?>><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
-                <li <?php echo ($this->uri->segment(2)=='sitemap'?'class="active"':'') ?>><?php echo anchor('sitemap','Peta Situs') ?></li>
-            </ul>          
+            <?php $this->load->view('menu_view'); ?>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
@@ -99,9 +54,9 @@
             <p class="footer-links">
                 <?php echo anchor('home','Home') ?>
                 ·
-                <?php echo anchor('page/sekilas','Profil') ?>
+                <?php echo anchor('pages/gambaran_umum','Profil') ?>
                 ·
-                <?php echo anchor('page/visimisi','Visi & Misi') ?>
+                <?php echo anchor('pages/visi_dan_misi','Visi & Misi') ?>
                 ·
                 <?php echo anchor('gallery','Galeri') ?>
             </p>
