@@ -2,23 +2,17 @@
 	<div class="col-md-8">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<div class="row row-heading" >
-				    <h3>
-				        <?php echo $article->title ?>
-				    </h3>
-				</div>	
+			    <h3><?php echo $article->title ?></h3>
 				<?php echo $article->content ?>						
 			</div>
 		</div>
 	</div>
 	<div class="col-md-4">
 		<div class="panel panel-default">
+			<div class="panel-heading">
+				BERITA LAINNYA
+			</div>
 			<div class="panel-body">
-				<div class="row row-heading" >
-				    <h3>
-				        BERITA LAINNYA
-				    </h3>
-				</div>
                 <div class="row">
                 	<div class="col-md-12">
 	                    <ul class="media-list main-list">
