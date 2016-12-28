@@ -139,6 +139,17 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        VIDEO
+                    </div>                
+                    <div class="panel-body">
+                        <iframe width="100%" src="https://www.youtube.com/embed/2Ex-59XlExc" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" src="https://www.youtube.com/embed/laFY1sEH53Q" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" src="https://www.youtube.com/embed/KLM8zx2E72k" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            <!--<div class="panel panel-default">
+                    <div class="panel-heading">
                         BUKU TAMU
                     </div>                
                     <div class="panel-body">
@@ -153,7 +164,7 @@
                     <div class="panel-footer">
                         <p class="text-center"><?php echo anchor('buku_tamu','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>
                     </div>    
-                </div>                
+                </div> -->            
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
@@ -186,16 +197,6 @@
                         <ul class="first"><li><img alt='Prestasi yang pernah di raih oleh Dinas Kebersihan dan Peratmanan Kabupaten Cianjur yaitu Program ADIPURA yang diraih beberapa tahun yang di selenggarakan oleh Kementrian Lingkungan hidup yang bertujuan untuk program Adipura difokuskan untuk mendorong kota-kota di Indonesia menjadi "Kota Bersih dan Teduh".' src="<?php echo config_item('assets')?>img/prestasi/3.jpg" class="img-thumbnail img-responsive center-block"></li></ul>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        VIDEO
-                    </div>                
-                    <div class="panel-body">
-                    	<iframe width="100%" src="https://www.youtube.com/embed/2Ex-59XlExc" frameborder="0" allowfullscreen></iframe>
-                    	<iframe width="100%" src="https://www.youtube.com/embed/laFY1sEH53Q" frameborder="0" allowfullscreen></iframe>
-                    	<iframe width="100%" src="https://www.youtube.com/embed/KLM8zx2E72k" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
             </div>    
             <div class="col-md-4">
                 <div class="panel panel-default">
@@ -204,7 +205,7 @@
                     </div>                
                     <div class="panel-body">
                         <ul class="row first">
-                            <?php $i=1;foreach ($list as $row): ?>
+                            <?php $i=1;foreach ($photo as $row): ?>
                             <li>
                                 <img alt="<?php echo $row->title ?>" src="<?php echo config_item('assets').'photo/'.$row->filename ?>">
                                 <div class="text"><?php echo $row->desc ?></div>

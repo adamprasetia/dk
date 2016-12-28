@@ -48,7 +48,7 @@
             </li>              
         </ul>
         <ul>
-            <li><?php echo anchor('buku_tamu','Buku Tamu') ?></li>
+            <!-- <li><?php echo anchor('buku_tamu','Buku Tamu') ?></li> -->
             <li><?php echo anchor('sitemap','Peta Situs') ?></li>
         </ul>          
 	</div>

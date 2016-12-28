@@ -15,7 +15,11 @@
     <?php endforeach ?>
 </ul>
 <div class="pagination">
-    <?php echo $pagination ?>
+    <?php 
+        if (isset($pagination)) {
+            echo $pagination;
+        }
+    ?>
 </div>
 <script type="text/javascript" src="<?php echo config_item('assets') ?>plugin/bootstrap-photo-gallery/jquery.bsPhotoGallery.js"></script>
 <script>

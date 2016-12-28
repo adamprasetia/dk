@@ -15,30 +15,23 @@ class Home extends CI_Controller {
 	}
 	private function get_data()
 	{
-		/* Photo */
-		// $json = file_get_contents(base_url('assets/json/photo.json'));
-		// $photo = json_decode($json);
-		$photo = $this->home_model->get_photo();
-		$data['list'] = $photo;
+		/* Photo by JSON */
+		$json = file_get_contents(base_url('assets/json/photo.json'));
+		$photo = json_decode($json);
+		$data['photo'] = $photo->list[0];
 
-		/* Headline */
-		// $json = file_get_contents(base_url('assets/json/article_headline.json'));
-		// $article_headline = json_decode($json);
-		$article_headline = $this->home_model->get_headline();
-		$i=0;
-		foreach ($article_headline as $row) {
-			preg_match_all('/<img[^>]+>/i',$row->content, $img);
-		    preg_match_all('/src=("[^"]*")/i',$img[0][0], $src);
-			$article_headline[$i]->image = trim($src[1][0],'"');
-			$i++;
-		}
-
-		$data['article_headline'] = $article_headline;
+		/* Photo by DB */
+		// $photo = $this->home_model->get_photo();
+		// $data['photo'] = $photo;
 		
-		/* Article */
-		// $json = file_get_contents(base_url('assets/json/article.json'));
-		// $article = json_decode($json);
-		$article = $this->home_model->get_article();
+		/* Article by JSON*/
+		$json = file_get_contents(base_url('assets/json/article.json'));
+		$article = json_decode($json);
+		$article = $article->list[0];
+		
+		/* Article by DB*/
+		// $article = $this->home_model->get_article();
+
 		$i=0;
 		foreach ($article as $row) {
 			preg_match_all('/<img[^>]+>/i',$row->content, $img);
