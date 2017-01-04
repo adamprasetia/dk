@@ -109,41 +109,6 @@ class General{
 		$data['row'] = $row;
 		return $this->ci->load->view('general_form',$data,true);
 	}
-	public function get_add_detail($field,$id){
-		$data = array();
-		foreach ($field as $row) {
-			if ($row['field']) {
-				$field_input[$row['id']] = $this->ci->input->post($row['id']);
-			}
-		}
-		if($field_input[$field[0]['id']]){
-			$i=0;
-			foreach ($field_input[$field[0]['id']] as $row) {
-				$field_detail['id_parent'] = $id;
-				foreach ($field as $rows) {
-					if ($rows['field']) {
-						if ($rows['type']=='string' || $rows['type']=='memo') {
-							$field_detail[$rows['id']] = strtoupper($field_input[$rows['id']][$i]);
-						}elseif ($rows['type']=='date') {
-							$field_detail[$rows['id']] = format_ymd($field_input[$rows['id']][$i]);
-						}elseif ($rows['type']=='number') {
-							$field_detail[$rows['id']] = str_replace(",", "", $field_input[$rows['id']][$i]);
-						}else{
-							$field_detail[$rows['id']] = $field_input[$rows['id']][$i];
-						}
-					}
-				}	
-				$field_detail['user_create'] = $this->ci->session->userdata('user_login')['id'];
-				$field_detail['date_create'] = date('Y-m-d H:i:s');
-				$data[] = $field_detail;
-				$i++;
-			}
-		}		
-		if ($data) {
-			return $data;	
-		}
-		return false;
-	}
 	public function get_limit(){
 		$result = $this->ci->input->get('limit');
 		if($result==''){

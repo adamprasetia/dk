@@ -8,7 +8,7 @@ class Article extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('text');		
-		$this->load->model('article_model');
+		// $this->load->model('article_model');
 	}
 	public function index()
 	{

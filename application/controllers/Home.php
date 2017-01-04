@@ -6,7 +6,7 @@ class Home extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('text');
-		$this->load->model('home_model');
+		// $this->load->model('home_model');
 	}
 	public function index()
 	{
@@ -41,8 +41,8 @@ class Home extends CI_Controller {
 		}
 		$data['article'] = $article;
 
-		$buku_tamu = $this->home_model->get_buku_tamu();
-		$data['buku_tamu'] = $buku_tamu;
+		// $buku_tamu = $this->home_model->get_buku_tamu();
+		// $data['buku_tamu'] = $buku_tamu;
 		return $data;
 	}
 }

@@ -5,7 +5,7 @@ class Gallery extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('gallery_model');
+		// $this->load->model('gallery_model');
 	}
 	public function index()
 	{

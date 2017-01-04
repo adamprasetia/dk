@@ -73,11 +73,11 @@
                 <p>(0263) 265110</p>
             </div>
 
-<!--             <div>
+            <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">support@company.com</a></p>
+                <p><a href="mailto:kebersihan.cianjur@gmail.com">kebersihan.cianjur@gmail.com</a></p>
             </div>
- -->        </div>
+        </div>
         <div class="footer-right">
             <p class="footer-company-about">
                 <span>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</span>

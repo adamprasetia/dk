@@ -184,7 +184,7 @@
                         <?php endforeach ?>
                     </div>
                     <div class="panel-footer">
-                        <p class="text-center"><?php echo anchor('article','Lainnya',array('class'=>'btn btn-warning')) ?></p>
+                        <p class="text-center"><?php echo anchor('article','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>
                     </div>    
                 </div>
                 <div class="panel panel-default">
@@ -240,16 +240,6 @@
                         <ul class="first"><li><img alt="Pelayanan TPA (TPA PASIR SEMBUNG)" class="img-thumbnail img-responsive center-block" src="<?php echo config_item('assets') ?>img/tpa.jpg"></li></ul>
                     </div>
                 </div>                
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        KONTAK
-                    </div>                
-                    <div class="panel-body">
-                        <p>Dikelola dan Dipublikasikan oleh Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</p>
-                        <p>Email : Kebersihan.Cianjur@gmail.com</p>
-                        <p>Tlp. (0263) 265110</p>                    
-                    </div>
-                </div>                
             </div>
         </div>    
     </div>
@@ -279,11 +269,12 @@
                 <p>(0263) 265110</p>
             </div>
 
-<!--             <div>
+            <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">support@company.com</a></p>
+                <p><a href="mailto:kebersihan.cianjur@gmail.com">kebersihan.cianjur@gmail.com</a></p>
             </div>
- -->        </div>
+
+        </div>
         <div class="footer-right">
             <p class="footer-company-about">
                 <span>Dinas Kebersihan dan Pertamanan Kabupaten Cianjur</span>
