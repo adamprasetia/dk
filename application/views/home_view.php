@@ -103,6 +103,19 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        JENIS PELAYANAN
+                    </div>                
+                    <div class="panel-body">
+                        <ul>
+                            <li>Pelayanan Pengangkutan Sampah</li>
+                            <li>Pelayanan Sedot Tinja/Kakus</li>
+                            <li>Pelayanan Pemakaman</li>
+                            <li>Pelayanan Pembungan Sampah di TPA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
                         PENGUMUMAN
                     </div>                
                     <div class="panel-body">
@@ -122,29 +135,6 @@
                             <li><?php echo anchor(config_item('assets').'pdf/renja.pdf','RENJA') ?></li>
                             <li><?php echo anchor(config_item('assets').'pdf/renstra.pdf','RENSTRA') ?></li>
                         </ul>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        JENIS PELAYANAN
-                    </div>                
-                    <div class="panel-body">
-                        <ul>
-                            <li>Pelayanan Pengangkutan Sampah</li>
-                            <li>Pelayanan Sedot Tinja/Kakus</li>
-                            <li>Pelayanan Pemakaman</li>
-                            <li>Pelayanan Pembungan Sampah di TPA</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        VIDEO
-                    </div>                
-                    <div class="panel-body">
-                        <iframe width="100%" src="https://www.youtube.com/embed/2Ex-59XlExc" frameborder="0" allowfullscreen></iframe>
-                        <iframe width="100%" src="https://www.youtube.com/embed/laFY1sEH53Q" frameborder="0" allowfullscreen></iframe>
-                        <iframe width="100%" src="https://www.youtube.com/embed/KLM8zx2E72k" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -167,7 +157,7 @@
                 </div> -->            
             </div>
             <div class="col-md-4">
-                <div class="panel panel-default">
+<!--                 <div class="panel panel-default">
                     <div class="panel-heading">
                         BERITA
                     </div>                
@@ -187,7 +177,7 @@
                         <p class="text-center"><?php echo anchor('article','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>
                     </div>    
                 </div>
-                <div class="panel panel-default">
+ -->                <div class="panel panel-default">
                     <div class="panel-heading">
                         PRESTASI
                     </div>                
@@ -195,26 +185,6 @@
                         <ul class="first"><li><img alt='Prestasi yang pernah di raih oleh Dinas Kebersihan dan Peratmanan Kabupaten Cianjur yaitu Program ADIPURA yang diraih beberapa tahun yang di selenggarakan oleh Kementrian Lingkungan hidup yang bertujuan untuk program Adipura difokuskan untuk mendorong kota-kota di Indonesia menjadi "Kota Bersih dan Teduh".' src="<?php echo config_item('assets')?>img/prestasi/1.jpg" class="img-thumbnail img-responsive center-block"></li></ul>
                         <ul class="first"><li><img alt='Prestasi yang pernah di raih oleh Dinas Kebersihan dan Peratmanan Kabupaten Cianjur yaitu Program ADIPURA yang diraih beberapa tahun yang di selenggarakan oleh Kementrian Lingkungan hidup yang bertujuan untuk program Adipura difokuskan untuk mendorong kota-kota di Indonesia menjadi "Kota Bersih dan Teduh".' src="<?php echo config_item('assets')?>img/prestasi/2.jpg" class="img-thumbnail img-responsive center-block"></li></ul>
                         <ul class="first"><li><img alt='Prestasi yang pernah di raih oleh Dinas Kebersihan dan Peratmanan Kabupaten Cianjur yaitu Program ADIPURA yang diraih beberapa tahun yang di selenggarakan oleh Kementrian Lingkungan hidup yang bertujuan untuk program Adipura difokuskan untuk mendorong kota-kota di Indonesia menjadi "Kota Bersih dan Teduh".' src="<?php echo config_item('assets')?>img/prestasi/3.jpg" class="img-thumbnail img-responsive center-block"></li></ul>
-                    </div>
-                </div>
-            </div>    
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        GALERI
-                    </div>                
-                    <div class="panel-body">
-                        <ul class="row first">
-                            <?php $i=1;foreach ($photo as $row): ?>
-                            <li>
-                                <img alt="<?php echo $row->title ?>" src="<?php echo config_item('assets').'photo/'.$row->filename ?>">
-                                <div class="text"><?php echo $row->desc ?></div>
-                            </li>
-                            <?php if($i==4){break;}$i++;endforeach ?>
-                        </ul>                                        
-                    </div>
-                    <div class="panel-footer">
-                        <p class="text-center"><?php echo anchor('gallery','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>                        
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -238,6 +208,36 @@
                         <ul class="first"><li><img alt="Pelayanan Angkutan Sampah" class="img-thumbnail img-responsive center-block" src="<?php echo config_item('assets') ?>img/peta.jpg"></li></ul>
                         <p><strong>Pelayanan TPA (TPA PASIR SEMBUNG)</strong></p>
                         <ul class="first"><li><img alt="Pelayanan TPA (TPA PASIR SEMBUNG)" class="img-thumbnail img-responsive center-block" src="<?php echo config_item('assets') ?>img/tpa.jpg"></li></ul>
+                    </div>
+                </div>                                
+            </div>    
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        GALERI
+                    </div>                
+                    <div class="panel-body">
+                        <ul class="row first">
+                            <?php $i=1;foreach ($photo as $row): ?>
+                            <li>
+                                <img alt="<?php echo $row->title ?>" src="<?php echo config_item('assets').'photo/'.$row->filename ?>">
+                                <div class="text"><?php echo $row->desc ?></div>
+                            </li>
+                            <?php if($i==4){break;}$i++;endforeach ?>
+                        </ul>                                        
+                    </div>
+                    <div class="panel-footer">
+                        <p class="text-center"><?php echo anchor('gallery','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>                        
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        VIDEO
+                    </div>                
+                    <div class="panel-body">
+                        <iframe width="100%" src="https://www.youtube.com/embed/2Ex-59XlExc" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" src="https://www.youtube.com/embed/laFY1sEH53Q" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" src="https://www.youtube.com/embed/KLM8zx2E72k" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>                
             </div>

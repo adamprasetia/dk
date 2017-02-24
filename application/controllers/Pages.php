@@ -6,7 +6,6 @@ class Pages extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->helper('text');
-		$this->load->model('page_model');
 	}
 	public function index($name='')
 	{
