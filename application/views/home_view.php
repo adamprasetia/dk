@@ -157,27 +157,29 @@
                 </div> -->            
             </div>
             <div class="col-md-4">
-<!--                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        BERITA
-                    </div>                
-                    <div class="panel-body">
-                        <?php foreach ($article as $row): ?>
-                        <div class="media media-list">
-                            <div class="media-left">
-                                <?php echo anchor('article/read/'.$row->id,'<img class="media-object" src="'.$row->image.'" alt="'.$row->title.'" width="140" height="96">') ?>
+                <?php if (isset($article)): ?>                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            BERITA
+                        </div>                
+                        <div class="panel-body">
+                            <?php foreach ($article as $row): ?>
+                            <div class="media media-list">
+                                <div class="media-left">
+                                    <?php echo anchor('article/read/'.$row->id,'<img class="media-object" src="'.$row->image.'" alt="'.$row->title.'" width="140" height="96">') ?>
+                                </div>
+                                <div class="media-body">
+                                    <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,word_limiter($row->title,8)) ?></h5>
+                                </div>
                             </div>
-                            <div class="media-body">
-                                <h5 class="media-heading" title="<?php echo $row->title ?>"><?php echo anchor('article/read/'.$row->id,word_limiter($row->title,8)) ?></h5>
-                            </div>
+                            <?php endforeach ?>
                         </div>
-                        <?php endforeach ?>
+                        <div class="panel-footer">
+                            <p class="text-center"><?php echo anchor('article','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>
+                        </div>    
                     </div>
-                    <div class="panel-footer">
-                        <p class="text-center"><?php echo anchor('article','Selengkapnya',array('class'=>'btn btn-warning')) ?></p>
-                    </div>    
-                </div>
- -->                <div class="panel panel-default">
+                <?php endif ?>
+                <div class="panel panel-default">
                     <div class="panel-heading">
                         PRESTASI
                     </div>                
